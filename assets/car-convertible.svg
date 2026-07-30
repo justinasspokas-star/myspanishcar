@@ -1,0 +1,9 @@
+<svg viewBox="0 0 320 170" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Convertible car illustration">
+  <ellipse cx="160" cy="144" rx="118" ry="14" fill="#DCE4EC"/>
+  <path d="M41 111l17-31c5-10 14-16 25-18l56-9 28 19h50c16 0 29 6 38 18l17 8c10 5 16 13 16 22v10H31v-6c0-7 4-11 10-13z" fill="#E9483B" stroke="#0F2747" stroke-width="5"/>
+  <path d="M108 59l30-5 27 18h-69l12-13z" fill="#DDF3FF" stroke="#0F2747" stroke-width="5"/>
+  <path d="M166 72h42" stroke="#0F2747" stroke-width="5" stroke-linecap="round"/>
+  <circle cx="88" cy="127" r="23" fill="#0F2747"/><circle cx="88" cy="127" r="10" fill="#F8FAFC"/>
+  <circle cx="245" cy="127" r="23" fill="#0F2747"/><circle cx="245" cy="127" r="10" fill="#F8FAFC"/>
+  <path d="M44 112h21M260 105h19" stroke="#fff" stroke-width="5" stroke-linecap="round"/>
+</svg>
