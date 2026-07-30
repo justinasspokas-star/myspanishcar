@@ -38,3 +38,8 @@ The buttons currently display a reminder toast. In `script.js`, replace that beh
 - Includes `CNAME` for `myspanishcar.com` and `.nojekyll` for GitHub Pages
 
 Upload every file and folder in this directory to the root of the GitHub repository.
+
+
+## v5
+- Added an accessible hamburger menu for tablet and mobile.
+- Mobile links: Compare cars, Why us, Airports and FAQ.

@@ -32,7 +32,7 @@
   <meta name="twitter:description" content="Compare price, deposit, card requirements and insurance before you book.">
   <meta name="twitter:image" content="https://myspanishcar.com/assets/social-preview.jpg?v=4">
   <meta name="twitter:image:alt" content="MySpanishCar car rental comparison in Spain">
-  <link rel="stylesheet" href="styles.css?v=3">
+  <link rel="stylesheet" href="styles.css?v=5">
   <script type="application/ld+json">
   {
     "@context":"https://schema.org",
@@ -72,8 +72,22 @@
         <a href="#airports">Airports</a>
         <a href="#faq">FAQ</a>
       </nav>
-      <a class="header-cta" href="#search">Find a car</a>
+      <div class="header-actions">
+        <a class="header-cta" href="#search">Find a car</a>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open navigation menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
     </div>
+    <nav class="mobile-nav" id="mobile-menu" aria-label="Mobile navigation" aria-hidden="true">
+      <div class="container mobile-nav-inner">
+        <a href="#results"><span>Compare cars</span><b aria-hidden="true">→</b></a>
+        <a href="#why-us"><span>Why us</span><b aria-hidden="true">→</b></a>
+        <a href="#airports"><span>Airports</span><b aria-hidden="true">→</b></a>
+        <a href="#faq"><span>FAQ</span><b aria-hidden="true">→</b></a>
+        <a class="mobile-nav-cta" href="#search">Find a car</a>
+      </div>
+    </nav>
   </header>
 
   <main id="top">
@@ -352,6 +366,6 @@
   </footer>
 
   <div class="toast" id="toast" role="status" aria-live="polite"></div>
-  <script src="script.js?v=3" defer></script>
+  <script src="script.js?v=5" defer></script>
 </body>
 </html>

@@ -106,3 +106,41 @@ document.querySelectorAll('.airport-grid a').forEach(link => {
 
 document.querySelector('#year').textContent = new Date().getFullYear();
 updatePrices(getDays());
+
+
+// Mobile navigation
+const menuToggle = document.querySelector('.menu-toggle');
+const mobileMenu = document.querySelector('#mobile-menu');
+
+function setMobileMenu(open) {
+  if (!menuToggle || !mobileMenu) return;
+  menuToggle.setAttribute('aria-expanded', String(open));
+  menuToggle.setAttribute('aria-label', open ? 'Close navigation menu' : 'Open navigation menu');
+  mobileMenu.setAttribute('aria-hidden', String(!open));
+  mobileMenu.classList.toggle('is-open', open);
+}
+
+if (menuToggle && mobileMenu) {
+  menuToggle.addEventListener('click', () => {
+    setMobileMenu(menuToggle.getAttribute('aria-expanded') !== 'true');
+  });
+
+  mobileMenu.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => setMobileMenu(false));
+  });
+
+  document.addEventListener('keydown', event => {
+    if (event.key === 'Escape') {
+      setMobileMenu(false);
+      menuToggle.focus();
+    }
+  });
+
+  document.addEventListener('click', event => {
+    if (!event.target.closest('.site-header')) setMobileMenu(false);
+  });
+
+  window.addEventListener('resize', () => {
+    if (window.innerWidth > 1020) setMobileMenu(false);
+  });
+}
