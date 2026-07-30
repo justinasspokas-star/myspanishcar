@@ -47,3 +47,13 @@ Upload every file and folder in this directory to the root of the GitHub reposit
 ## Google Analytics 4
 
 Measurement ID installed in `index.html`: `G-K1D72W9P67`.
+
+## Version 7: cookie consent and legal pages
+
+- Google Analytics `G-K1D72W9P67` now uses a **basic Consent Mode v2 implementation**: the Google tag does not load until analytics consent is granted.
+- The first layer provides equally accessible accept, reject and configure actions.
+- Consent is stored in local storage for up to 180 days and can be changed from the footer.
+- Added `cookies.html`, `privacy.html`, `legal.html` and `affiliate-disclosure.html`.
+
+### Required before commercial launch
+Replace the legal-operator placeholder information in `privacy.html` and `legal.html` with the operator's full legal name, tax identification number, registration details and postal address. This technical template is not a substitute for legal review.

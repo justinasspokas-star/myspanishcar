@@ -2,13 +2,19 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-K1D72W9P67"></script>
+  <!-- Consent Mode v2 defaults: no analytics or advertising storage before consent. -->
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-K1D72W9P67');
+    gtag('consent', 'default', {
+      ad_storage: 'denied',
+      ad_user_data: 'denied',
+      ad_personalization: 'denied',
+      analytics_storage: 'denied',
+      functionality_storage: 'granted',
+      security_storage: 'granted'
+    });
+    gtag('set', 'ads_data_redaction', true);
   </script>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Car Rental Spain – Compare Price, Deposit & Insurance | MySpanishCar</title>
@@ -40,7 +46,7 @@
   <meta name="twitter:description" content="Compare price, deposit, card requirements and insurance before you book.">
   <meta name="twitter:image" content="https://myspanishcar.com/assets/social-preview.jpg?v=4">
   <meta name="twitter:image:alt" content="MySpanishCar car rental comparison in Spain">
-  <link rel="stylesheet" href="styles.css?v=5">
+  <link rel="stylesheet" href="styles.css?v=7">
   <script type="application/ld+json">
   {
     "@context":"https://schema.org",
@@ -365,7 +371,7 @@
       </div>
       <div><strong>Compare</strong><a href="#search">Search cars</a><a href="#airports">Airports</a><a href="#results">Example results</a></div>
       <div><strong>About</strong><a href="#why-us">How it works</a><a href="#faq">FAQ</a><a href="mailto:hello@myspanishcar.com">Contact</a></div>
-      <div><strong>Legal</strong><a href="#affiliate-disclosure">Affiliate disclosure</a><a href="#">Privacy</a><a href="#">Cookies</a></div>
+      <div><strong>Legal</strong><a href="affiliate-disclosure.html">Affiliate disclosure</a><a href="privacy.html">Privacy</a><a href="cookies.html">Cookies</a><button class="footer-link-button" type="button" data-cookie-settings>Cookie settings</button></div>
     </div>
     <div class="container footer-bottom" id="affiliate-disclosure">
       <p><strong>Affiliate disclosure:</strong> MySpanishCar may earn a commission when a user completes a booking through a partner link. This does not increase the customer’s price.</p>
@@ -374,6 +380,60 @@
   </footer>
 
   <div class="toast" id="toast" role="status" aria-live="polite"></div>
-  <script src="script.js?v=5" defer></script>
+
+  <section class="cookie-banner" id="cookie-banner" aria-label="Cookie consent" hidden>
+    <div class="cookie-banner-inner">
+      <div class="cookie-copy">
+        <p class="cookie-kicker">Your privacy choices</p>
+        <h2>We use optional analytics cookies</h2>
+        <p>Essential storage keeps your cookie choice. With your permission, Google Analytics helps us understand visits and improve MySpanishCar. Rejecting analytics does not affect the website.</p>
+        <a href="cookies.html">Read the cookie policy</a>
+      </div>
+      <div class="cookie-actions" role="group" aria-label="Cookie choices">
+        <button class="cookie-button cookie-button-secondary" type="button" data-consent="reject">Reject non-essential</button>
+        <button class="cookie-button cookie-button-secondary" type="button" data-consent="settings">Configure</button>
+        <button class="cookie-button cookie-button-primary" type="button" data-consent="accept">Accept analytics</button>
+      </div>
+    </div>
+  </section>
+
+  <div class="cookie-modal-backdrop" id="cookie-modal-backdrop" hidden>
+    <section class="cookie-modal" id="cookie-modal" role="dialog" aria-modal="true" aria-labelledby="cookie-modal-title" tabindex="-1">
+      <div class="cookie-modal-head">
+        <div>
+          <p class="cookie-kicker">Privacy settings</p>
+          <h2 id="cookie-modal-title">Choose your cookies</h2>
+        </div>
+        <button class="cookie-close" type="button" data-cookie-close aria-label="Close cookie settings">×</button>
+      </div>
+      <div class="cookie-category">
+        <div>
+          <h3>Essential storage</h3>
+          <p>Required to remember your privacy choice and operate the website. It cannot be switched off.</p>
+        </div>
+        <span class="cookie-required">Always active</span>
+      </div>
+      <div class="cookie-category">
+        <div>
+          <h3>Analytics</h3>
+          <p>Allows Google Analytics to measure visits, devices and approximate location so we can improve the site.</p>
+        </div>
+        <label class="cookie-switch">
+          <input id="analytics-consent-toggle" type="checkbox">
+          <span aria-hidden="true"></span>
+          <b>Allow analytics</b>
+        </label>
+      </div>
+      <p class="cookie-policy-note">You can change this choice at any time using “Cookie settings” in the footer. See our <a href="cookies.html">cookie policy</a>.</p>
+      <div class="cookie-modal-actions">
+        <button class="cookie-button cookie-button-secondary" type="button" data-consent="reject">Reject non-essential</button>
+        <button class="cookie-button cookie-button-primary" type="button" data-consent="save">Save preferences</button>
+      </div>
+    </section>
+  </div>
+
+  <button class="cookie-settings-fab" type="button" data-cookie-settings hidden aria-label="Open cookie settings">Cookie settings</button>
+  <script src="consent.js?v=7" defer></script>
+  <script src="script.js?v=7" defer></script>
 </body>
 </html>
