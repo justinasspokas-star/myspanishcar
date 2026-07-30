@@ -43,3 +43,7 @@ Upload every file and folder in this directory to the root of the GitHub reposit
 ## v5
 - Added an accessible hamburger menu for tablet and mobile.
 - Mobile links: Compare cars, Why us, Airports and FAQ.
+
+## Google Analytics 4
+
+Measurement ID installed in `index.html`: `G-K1D72W9P67`.
