@@ -119,3 +119,166 @@ h1{font-size:clamp(2.7rem,5vw,5rem);line-height:.99;letter-spacing:-.065em;margi
 @media(max-width:1020px){.brand img.brand-logo{width:250px;height:auto}}
 @media(max-width:700px){.brand img.brand-logo{width:178px;height:auto}.brand img.footer-logo{width:250px;height:auto}}
 @media(max-width:420px){.brand img.brand-logo{width:158px;height:auto}}
+
+
+/* =========================================================
+   MOBILE HERO & HEADER — clear, compact and conversion-first
+   Updated July 2026
+========================================================= */
+.hero-picture{display:block;width:100%}
+
+@media (max-width:700px){
+  body{overflow-x:hidden}
+  .container{width:min(100% - 28px,1180px)}
+
+  .site-header{background:rgba(255,255,255,.97);backdrop-filter:blur(12px)}
+  .header-inner{
+    width:min(100% - 22px,1180px);
+    height:64px;
+    gap:10px;
+  }
+  .brand{min-width:0;overflow:hidden}
+  .brand img.brand-logo{
+    width:clamp(138px,44vw,168px);
+    max-height:42px;
+    object-fit:contain;
+    object-position:left center;
+  }
+  .header-cta{
+    flex:0 0 auto;
+    padding:9px 11px;
+    border-radius:10px;
+    font-size:.74rem;
+    box-shadow:0 7px 16px rgba(15,39,71,.16);
+  }
+
+  .hero{
+    padding:28px 0 0;
+    overflow:hidden;
+    background:linear-gradient(180deg,#F7FBFE 0%,#fff 82%);
+  }
+  .hero:before{
+    width:320px;
+    height:320px;
+    top:-190px;
+    right:-145px;
+  }
+  .hero-grid.container{width:min(100% - 28px,1180px)}
+  .hero-grid{
+    display:flex;
+    flex-direction:column;
+    grid-template-columns:none;
+    min-height:0;
+    gap:0;
+  }
+  .hero-copy{
+    order:1;
+    width:100%;
+    max-width:100%;
+    text-align:left;
+  }
+  .eyebrow{
+    font-size:.66rem;
+    letter-spacing:.11em;
+    margin-bottom:10px;
+  }
+  .eyebrow span{width:22px;margin-right:7px}
+  h1{
+    font-size:clamp(2.05rem,10.5vw,2.55rem);
+    line-height:1.01;
+    letter-spacing:-.052em;
+    max-width:100%;
+  }
+  h1 mark{display:block}
+  h1 mark:after{height:5px;bottom:-6px;right:18%}
+  .hero-lead{
+    font-size:.98rem;
+    line-height:1.52;
+    margin:22px 0 15px;
+    max-width:34rem;
+  }
+  .trust-inline{
+    gap:8px;
+    font-size:.76rem;
+  }
+  .trust-inline span{
+    padding:7px 9px;
+    border:1px solid #DCE7EF;
+    border-radius:999px;
+    background:rgba(255,255,255,.86);
+    white-space:nowrap;
+  }
+
+  .hero-visual{
+    order:2;
+    width:100%;
+    min-height:0;
+    height:auto;
+    margin:17px 0 4px;
+    padding:0;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:flex-start;
+    overflow:visible;
+  }
+  .hero-badge{
+    position:static;
+    align-self:flex-end;
+    margin:0 2px 3px 0;
+    padding:7px 10px;
+    font-size:.69rem;
+    box-shadow:0 8px 20px rgba(15,39,71,.09);
+  }
+  .hero-badge:before{width:6px;height:6px;margin-right:6px}
+  .hero-picture{
+    display:flex;
+    justify-content:center;
+    width:100%;
+    max-width:390px;
+  }
+  .hero-visual img{
+    width:100%;
+    max-width:360px;
+    height:auto;
+    max-height:215px;
+    object-fit:contain;
+    object-position:center;
+    margin:0 auto;
+    transform:none;
+    mix-blend-mode:normal;
+    filter:saturate(1.02) contrast(1.01);
+  }
+
+  .search-wrap{margin-top:8px}
+  .search-card{padding:17px;border-radius:18px}
+  .search-heading{margin-bottom:16px}
+  .search-heading h2{font-size:1.17rem;line-height:1.22}
+  .secure-note{font-size:.72rem;padding:7px 10px}
+  .input-shell{height:49px}
+  .search-actions{gap:14px}
+
+  .trust-bar{padding:24px 0 48px}
+  .trust-grid{gap:13px}
+  .trust-grid>div{
+    padding:11px 12px;
+    border:1px solid var(--line);
+    border-radius:14px;
+    background:#fff;
+  }
+}
+
+@media (max-width:380px){
+  .header-inner{width:calc(100% - 18px);height:60px}
+  .brand img.brand-logo{width:136px;max-height:38px}
+  .header-cta{padding:8px 9px;font-size:.68rem}
+  .hero{padding-top:24px}
+  .hero-grid.container{width:calc(100% - 22px)}
+  h1{font-size:1.95rem}
+  .hero-lead{font-size:.93rem;margin-top:19px}
+  .trust-inline{gap:6px}
+  .trust-inline span{font-size:.7rem;padding:6px 8px}
+  .hero-visual{margin-top:14px}
+  .hero-visual img{max-width:310px;max-height:185px}
+  .hero-badge{font-size:.65rem;padding:6px 9px}
+}

@@ -28,3 +28,13 @@ Responsive static comparison-site prototype for `myspanishcar.com`.
 
 ## Affiliate integration
 The buttons currently display a reminder toast. In `script.js`, replace that behavior with a properly attributed affiliate URL or approved partner widget. Do not invent live prices without a data feed.
+
+
+## Mobile update v3
+- Compact responsive header
+- Hero text is always shown before the image on mobile
+- Smaller mobile-specific hero image
+- Improved trust badges and search-card spacing
+- Includes `CNAME` for `myspanishcar.com` and `.nojekyll` for GitHub Pages
+
+Upload every file and folder in this directory to the root of the GitHub repository.

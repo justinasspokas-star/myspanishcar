@@ -21,7 +21,7 @@
   <meta property="og:url" content="https://myspanishcar.com/">
   <meta property="og:image" content="https://myspanishcar.com/assets/og-preview.webp">
   <meta name="twitter:card" content="summary_large_image">
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles.css?v=3">
   <script type="application/ld+json">
   {
     "@context":"https://schema.org",
@@ -53,7 +53,7 @@
   <header class="site-header">
     <div class="container header-inner">
       <a class="brand" href="#top" aria-label="MySpanishCar home">
-        <img class="brand-logo" src="assets/myspanishcar-header-logo.png" alt="MySpanishCar" width="660" height="138">
+        <img class="brand-logo" src="assets/myspanishcar-header-logo.png?v=3" alt="MySpanishCar" width="660" height="138">
       </a>
       <nav class="desktop-nav" aria-label="Primary navigation">
         <a href="#results">Compare cars</a>
@@ -80,7 +80,10 @@
         </div>
         <div class="hero-visual" aria-hidden="true">
           <div class="hero-badge">Spain specialist</div>
-          <img src="assets/hero-spain-car-large.webp" alt="" width="1448" height="700" fetchpriority="high">
+          <picture class="hero-picture">
+            <source media="(max-width: 700px)" srcset="assets/hero-spain-car-mobile.webp?v=3">
+            <img src="assets/hero-spain-car-large.webp?v=3" alt="Red convertible rental car on the Spanish coast" width="1448" height="700" fetchpriority="high">
+          </picture>
         </div>
       </div>
 
@@ -324,7 +327,7 @@
   <footer class="site-footer">
     <div class="container footer-top">
       <div class="footer-brand">
-        <a class="brand inverse" href="#top" aria-label="MySpanishCar home"><img class="brand-logo footer-logo" src="assets/myspanishcar-header-logo.png" alt="MySpanishCar" width="660" height="138"></a>
+        <a class="brand inverse" href="#top" aria-label="MySpanishCar home"><img class="brand-logo footer-logo" src="assets/myspanishcar-header-logo.png?v=3" alt="MySpanishCar" width="660" height="138"></a>
         <p>Car rental comparison in Spain for international travellers.</p>
       </div>
       <div><strong>Compare</strong><a href="#search">Search cars</a><a href="#airports">Airports</a><a href="#results">Example results</a></div>
@@ -338,6 +341,6 @@
   </footer>
 
   <div class="toast" id="toast" role="status" aria-live="polite"></div>
-  <script src="script.js" defer></script>
+  <script src="script.js?v=3" defer></script>
 </body>
 </html>
