@@ -10,7 +10,6 @@
   const modalBackdrop = document.querySelector('#cookie-modal-backdrop');
   const modal = document.querySelector('#cookie-modal');
   const analyticsToggle = document.querySelector('#analytics-consent-toggle');
-  const settingsButtons = document.querySelectorAll('[data-cookie-settings]');
   let lastFocusedElement = null;
 
   function readConsent() {
@@ -33,7 +32,6 @@
     applyConsent(value.analytics);
     hideBanner();
     closeModal();
-    showSettingsButtons();
   }
 
   function applyConsent(analytics) {
@@ -97,9 +95,6 @@
     window.setTimeout(() => { banner.hidden = true; }, 220);
   }
 
-  function showSettingsButtons() {
-    settingsButtons.forEach(button => { button.hidden = false; });
-  }
 
   function openModal() {
     if (!modalBackdrop || !modal) return;
@@ -145,7 +140,6 @@
   const stored = readConsent();
   if (stored) {
     applyConsent(stored.analytics);
-    showSettingsButtons();
   } else {
     showBanner();
   }
