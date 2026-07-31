@@ -11,3 +11,7 @@ Upload every file and folder in this directory to the root of the GitHub reposit
 After deployment, send the affiliate network this page as ownership evidence:
 
 https://myspanishcar.com/legal.html
+
+
+## Version 11
+Added public Tradedoubler ownership verification to legal.html: Publisher/Organisation ID 2471060 and Site ID 3493292.
