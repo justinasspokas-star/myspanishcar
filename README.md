@@ -1,17 +1,12 @@
-# MySpanishCar v9 — ownership verification
+# MySpanishCar — Premium homepage v14
 
-This version updates the Legal Notice to identify **Justinas Spokas** as the owner and administrator of MySpanishCar.com. It also adds a visible website-ownership confirmation, domain-control statement and structured website publisher data.
+This version redesigns the homepage to match the approved premium mockup:
 
-The Privacy Policy has been updated with the same controller identity for consistency.
+- integrated Spanish city and red convertible hero image
+- cleaner desktop navigation with Home and Contact
+- premium overlapping search card
+- responsive mobile layout and hamburger menu
+- existing comparison prototype, Analytics consent, legal pages, favicon, CNAME and SEO files preserved
 
-## Upload to GitHub Pages
-
-Upload every file and folder in this directory to the root of the GitHub repository, replacing the previous version.
-
-After deployment, send the affiliate network this page as ownership evidence:
-
-https://myspanishcar.com/legal.html
-
-
-## Version 11
-Added public Tradedoubler ownership verification to legal.html: Publisher/Organisation ID 2471060 and Site ID 3493292.
+## Publish on GitHub Pages
+Upload every file and folder in this package to the root of the `myspanishcar` repository, replacing the current version.

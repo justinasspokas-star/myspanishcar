@@ -46,7 +46,7 @@
   <meta name="twitter:description" content="Compare price, deposit, card requirements and insurance before you book.">
   <meta name="twitter:image" content="https://myspanishcar.com/assets/social-preview.jpg?v=4">
   <meta name="twitter:image:alt" content="MySpanishCar car rental comparison in Spain">
-  <link rel="stylesheet" href="styles.css?v=7">
+  <link rel="stylesheet" href="styles.css?v=14">
   <script type="application/ld+json">
   {
     "@context":"https://schema.org",
@@ -81,13 +81,15 @@
         <img class="brand-logo" src="assets/myspanishcar-header-logo.png?v=3" alt="MySpanishCar" width="660" height="138">
       </a>
       <nav class="desktop-nav" aria-label="Primary navigation">
+        <a class="nav-active" href="#top">Home</a>
         <a href="#results">Compare cars</a>
-        <a href="#why-us">Why us</a>
         <a href="#airports">Airports</a>
+        <a href="#why-us">Why us</a>
         <a href="#faq">FAQ</a>
+        <a href="mailto:justinasspokas@gmail.com">Contact</a>
       </nav>
       <div class="header-actions">
-        <a class="header-cta" href="#search">Find a car</a>
+        <a class="header-cta" href="#search">Rent a car</a>
         <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open navigation menu">
           <span></span><span></span><span></span>
         </button>
@@ -95,11 +97,13 @@
     </div>
     <nav class="mobile-nav" id="mobile-menu" aria-label="Mobile navigation" aria-hidden="true">
       <div class="container mobile-nav-inner">
+        <a href="#top"><span>Home</span><b aria-hidden="true">→</b></a>
         <a href="#results"><span>Compare cars</span><b aria-hidden="true">→</b></a>
-        <a href="#why-us"><span>Why us</span><b aria-hidden="true">→</b></a>
         <a href="#airports"><span>Airports</span><b aria-hidden="true">→</b></a>
+        <a href="#why-us"><span>Why us</span><b aria-hidden="true">→</b></a>
         <a href="#faq"><span>FAQ</span><b aria-hidden="true">→</b></a>
-        <a class="mobile-nav-cta" href="#search">Find a car</a>
+        <a href="mailto:justinasspokas@gmail.com"><span>Contact</span><b aria-hidden="true">→</b></a>
+        <a class="mobile-nav-cta" href="#search">Rent a car</a>
       </div>
     </nav>
   </header>
@@ -120,29 +124,26 @@
         <div class="hero-visual" aria-hidden="true">
           <div class="hero-badge">Spain specialist</div>
           <picture class="hero-picture">
-            <source media="(max-width: 700px)" srcset="assets/hero-spain-car-mobile.webp?v=3">
-            <img src="assets/hero-spain-car-large.webp?v=3" alt="Red convertible rental car on the Spanish coast" width="1448" height="700" fetchpriority="high">
+            <source media="(max-width: 700px)" srcset="assets/hero-premium-mobile.webp?v=14">
+            <img src="assets/hero-premium-desktop.webp?v=14" alt="Red convertible rental car with Spanish city landmarks" width="1600" height="914" fetchpriority="high">
           </picture>
         </div>
       </div>
 
       <div class="container search-wrap" id="search">
         <form class="search-card" id="comparison-form" novalidate>
-          <div class="search-heading">
-            <div>
-              <p class="mini-label">Compare offers</p>
-              <h2>Where do you want to pick up your car?</h2>
-            </div>
-            <span class="secure-note">🔒 You book securely with the selected partner</span>
+          <div class="search-tabs" aria-label="Search type">
+            <span class="search-tab is-active">Rent a car</span>
+            <span class="search-intro">Compare clear rental conditions across Spain</span>
           </div>
 
-          <div class="form-grid">
-            <label class="field field-wide">
+          <div class="form-grid premium-form-grid">
+            <label class="field field-location">
               <span>Pickup location</span>
               <div class="input-shell">
                 <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s7-5.2 7-12a7 7 0 1 0-14 0c0 6.8 7 12 7 12Zm0-9.4A2.6 2.6 0 1 0 12 6.4a2.6 2.6 0 0 0 0 5.2Z"/></svg>
                 <select id="pickup-location" required>
-                  <option value="">Choose an airport or city</option>
+                  <option value="">City, airport or station</option>
                   <option>Málaga Airport (AGP)</option>
                   <option>Alicante Airport (ALC)</option>
                   <option>Palma de Mallorca Airport (PMI)</option>
@@ -170,7 +171,7 @@
               </div>
             </label>
 
-            <label class="field">
+            <label class="field field-age">
               <span>Driver age</span>
               <div class="input-shell">
                 <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8Zm-7 8a7 7 0 0 1 14 0"/></svg>
@@ -183,22 +184,20 @@
               </div>
             </label>
 
-            <label class="field">
-              <span>Card preference</span>
-              <div class="input-shell">
-                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6h18v12H3zM3 10h18M7 15h4"/></svg>
-                <select id="card-filter">
-                  <option value="all">Any card</option>
-                  <option value="debit">Debit card accepted</option>
-                  <option value="credit">Credit card available</option>
-                </select>
-              </div>
-            </label>
+            <button class="primary-button search-submit" type="submit">Compare cars <span aria-hidden="true">→</span></button>
           </div>
 
-          <div class="search-actions">
+          <div class="search-options">
+            <label class="compact-filter">
+              <span>Card preference</span>
+              <select id="card-filter">
+                <option value="all">Any card</option>
+                <option value="debit">Debit card accepted</option>
+                <option value="credit">Credit card available</option>
+              </select>
+            </label>
             <label class="check-row"><input id="same-location" type="checkbox" checked> Return to the same location</label>
-            <button class="primary-button" type="submit">Compare car rentals <span aria-hidden="true">→</span></button>
+            <span class="secure-note">Clear deposits · No booking fee from MySpanishCar</span>
           </div>
           <p class="form-error" id="form-error" role="alert"></p>
         </form>
@@ -433,6 +432,6 @@
   </div>
 
   <script src="consent.js?v=8" defer></script>
-  <script src="script.js?v=7" defer></script>
+  <script src="script.js?v=14" defer></script>
 </body>
 </html>
