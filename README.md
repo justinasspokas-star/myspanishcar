@@ -1,12 +1,9 @@
-# MySpanishCar — Premium homepage v14
+# MySpanishCar premium v15
 
-This version redesigns the homepage to match the approved premium mockup:
+Mobile spacing update only:
+- shorter mobile hero image
+- tighter spacing between copy, hero image and comparison form
+- comparison card visually connected to the hero
+- desktop layout unchanged
 
-- integrated Spanish city and red convertible hero image
-- cleaner desktop navigation with Home and Contact
-- premium overlapping search card
-- responsive mobile layout and hamburger menu
-- existing comparison prototype, Analytics consent, legal pages, favicon, CNAME and SEO files preserved
-
-## Publish on GitHub Pages
-Upload every file and folder in this package to the root of the `myspanishcar` repository, replacing the current version.
+Upload all files in this folder to the root of the GitHub repository.
