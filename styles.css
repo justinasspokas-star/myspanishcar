@@ -529,7 +529,6 @@ h1 mark::after{right:18%;height:6px;bottom:-10px}
 .search-card{border-radius:24px;padding:0 28px 22px;border:1px solid rgba(15,39,71,.09);box-shadow:0 26px 65px rgba(15,39,71,.14)}
 .search-tabs{height:58px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line);margin-bottom:20px}
 .search-tab{height:58px;display:inline-flex;align-items:center;position:relative;padding:0 9px;font-weight:850;color:var(--navy)}
-.search-tab::before{content:"🚘";font-size:1rem;margin-right:10px}
 .search-tab::after{content:"";position:absolute;left:0;right:0;bottom:-1px;height:3px;border-radius:4px 4px 0 0;background:var(--navy)}
 .search-intro{color:var(--muted);font-size:.82rem;font-weight:650}
 .premium-form-grid{display:grid;grid-template-columns:1.7fr 1fr 1fr .8fr 1.08fr;gap:14px;align-items:end}
@@ -707,4 +706,11 @@ h1 mark::after{right:18%;height:6px;bottom:-10px}
     padding-left:13px;
     padding-right:13px;
   }
+}
+
+
+/* V16 — search form without tab title */
+.search-card{padding-top:24px}
+@media(max-width:700px){
+  .search-card{padding-top:16px}
 }
