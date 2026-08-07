@@ -714,3 +714,291 @@ h1 mark::after{right:18%;height:6px;bottom:-10px}
 @media(max-width:700px){
   .search-card{padding-top:16px}
 }
+
+
+/* =========================================================
+   V17 — Illustrated airport cards
+========================================================= */
+.airport-grid.airport-grid-illustrated{
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:18px;
+}
+.airport-grid.airport-grid-illustrated .airport-card{
+  min-width:0;
+  padding:0;
+  display:grid;
+  grid-template-columns:132px minmax(0,1fr) 24px;
+  grid-template-rows:1fr;
+  column-gap:15px;
+  align-items:center;
+  overflow:hidden;
+  border-radius:20px;
+  background:rgba(255,255,255,.96);
+  box-shadow:0 12px 30px rgba(15,39,71,.07);
+}
+.airport-grid.airport-grid-illustrated .airport-card:hover{
+  transform:translateY(-3px);
+  box-shadow:0 18px 38px rgba(15,39,71,.12);
+  border-color:#BFD7E5;
+}
+.airport-thumb{
+  position:relative;
+  width:132px;
+  height:94px;
+  margin:0;
+  overflow:hidden;
+  align-self:stretch;
+  background:#DFF3FC;
+}
+.airport-thumb img{
+  display:block;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  object-position:center;
+  transition:transform .28s ease;
+}
+.airport-card:hover .airport-thumb img{transform:scale(1.045)}
+.airport-grid.airport-grid-illustrated .airport-code{
+  position:absolute;
+  left:9px;
+  bottom:8px;
+  grid-row:auto;
+  width:auto;
+  height:auto;
+  min-width:43px;
+  padding:6px 8px;
+  border-radius:10px;
+  background:rgba(10,28,51,.94);
+  color:#fff;
+  display:inline-grid;
+  place-items:center;
+  font-size:.72rem;
+  font-weight:900;
+  line-height:1;
+  letter-spacing:.045em;
+  box-shadow:0 5px 14px rgba(4,17,34,.24);
+}
+.airport-grid.airport-grid-illustrated .airport-copy{
+  grid-row:auto;
+  width:auto;
+  height:auto;
+  border-radius:0;
+  background:transparent;
+  color:inherit;
+  display:flex;
+  flex-direction:column;
+  align-items:flex-start;
+  justify-content:center;
+  min-width:0;
+  padding:14px 0;
+}
+.airport-grid.airport-grid-illustrated .airport-copy strong{
+  font-size:.97rem;
+  line-height:1.22;
+  color:var(--navy);
+  white-space:normal;
+}
+.airport-grid.airport-grid-illustrated .airport-copy small{
+  display:block;
+  margin-top:5px;
+  color:var(--muted);
+  font-size:.76rem;
+}
+.airport-grid.airport-grid-illustrated .airport-arrow{
+  grid-row:auto;
+  width:auto;
+  height:auto;
+  border-radius:0;
+  background:transparent;
+  color:var(--navy);
+  display:block;
+  font-size:1.65rem;
+  font-weight:400;
+  line-height:1;
+  padding-right:12px;
+  opacity:.72;
+}
+
+@media(max-width:1120px){
+  .airport-grid.airport-grid-illustrated{grid-template-columns:1fr 1fr}
+}
+
+@media(max-width:700px){
+  .airports-section .section-heading{margin-bottom:25px}
+  .airport-grid.airport-grid-illustrated{grid-template-columns:1fr;gap:11px}
+  .airport-grid.airport-grid-illustrated .airport-card{
+    grid-template-columns:108px minmax(0,1fr) 22px;
+    min-height:82px;
+    border-radius:17px;
+    column-gap:12px;
+    box-shadow:0 8px 22px rgba(15,39,71,.06);
+  }
+  .airport-thumb{width:108px;height:82px}
+  .airport-grid.airport-grid-illustrated .airport-code{
+    left:7px;bottom:7px;min-width:39px;padding:5px 7px;border-radius:9px;font-size:.66rem
+  }
+  .airport-grid.airport-grid-illustrated .airport-copy{padding:11px 0}
+  .airport-grid.airport-grid-illustrated .airport-copy strong{font-size:.88rem}
+  .airport-grid.airport-grid-illustrated .airport-copy small{font-size:.7rem;margin-top:3px}
+  .airport-grid.airport-grid-illustrated .airport-arrow{font-size:1.45rem;padding-right:10px}
+}
+
+@media(max-width:390px){
+  .airport-grid.airport-grid-illustrated .airport-card{grid-template-columns:96px minmax(0,1fr) 20px}
+  .airport-thumb{width:96px;height:78px}
+  .airport-grid.airport-grid-illustrated .airport-copy strong{font-size:.82rem}
+}
+
+
+/* =========================================================
+   SEO AIRPORT GUIDE — Málaga AGP
+   Added August 2026
+========================================================= */
+.guide-page{background:#fff}.guide-hero{padding:54px 0 56px;background:linear-gradient(180deg,#F7FBFE 0%,#fff 100%)}
+.guide-breadcrumb{display:flex;align-items:center;gap:9px;color:var(--muted);font-size:.82rem;margin-bottom:26px}.guide-breadcrumb a:hover{color:var(--navy)}.guide-breadcrumb strong{color:var(--navy)}
+.guide-hero-grid{display:grid;grid-template-columns:1.03fr .97fr;gap:56px;align-items:center}.guide-hero-copy h1{font-size:clamp(2.7rem,5vw,4.9rem);max-width:760px}.guide-hero-copy h1 mark{display:inline;background:none;color:var(--orange)}.guide-intro{font-size:1.1rem;color:var(--muted);max-width:720px;margin:25px 0 22px}.guide-cta-row{display:flex;align-items:center;gap:22px;flex-wrap:wrap}.guide-text-link{font-weight:800;color:var(--navy);border-bottom:2px solid var(--gold)}.guide-disclosure{font-size:.76rem;color:#7A8797;margin:18px 0 0;max-width:650px}
+.guide-hero-image{margin:0;background:#fff;border:1px solid var(--line);border-radius:24px;overflow:hidden;box-shadow:var(--shadow)}.guide-hero-image img{width:100%;aspect-ratio:720/332;object-fit:cover}.guide-hero-image figcaption{padding:12px 16px;color:var(--muted);font-size:.78rem;font-weight:700}
+.guide-facts{padding:0 0 68px}.guide-fact-grid{display:grid;grid-template-columns:repeat(4,1fr);border:1px solid var(--line);border-radius:22px;overflow:hidden;background:#fff;box-shadow:0 12px 34px rgba(15,39,71,.06)}.guide-fact-grid>div{padding:23px 24px;border-right:1px solid var(--line)}.guide-fact-grid>div:last-child{border-right:0}.guide-fact-grid span{display:block;color:var(--orange);font-size:1.45rem;font-weight:900;letter-spacing:-.04em}.guide-fact-grid strong{display:block;color:var(--navy);font-size:.9rem}.guide-fact-grid small{display:block;color:var(--muted);font-size:.72rem;margin-top:2px}
+.guide-section{padding:76px 0 100px;background:#F9FCFE}.guide-layout{display:grid;grid-template-columns:minmax(0,1fr) 310px;gap:58px;align-items:start}.guide-main{min-width:0}.guide-main>h2,.guide-faq>h2,.guide-sources>h2{font-size:clamp(1.8rem,3vw,2.7rem);line-height:1.12;letter-spacing:-.045em;color:var(--navy);margin:48px 0 15px}.guide-main>h2:first-of-type{margin-top:0}.guide-main>p{color:var(--muted);font-size:1rem}.guide-main strong{color:var(--navy)}
+.guide-table-wrap{overflow-x:auto;margin:24px 0 10px;border:1px solid var(--line);border-radius:18px;background:#fff;box-shadow:0 8px 28px rgba(15,39,71,.045)}.guide-table{width:100%;border-collapse:collapse;min-width:760px}.guide-table th,.guide-table td{text-align:left;padding:15px 16px;border-bottom:1px solid #E6EDF3;font-size:.86rem;vertical-align:top}.guide-table th{background:#F3F8FB;color:var(--navy);font-size:.75rem;text-transform:uppercase;letter-spacing:.06em}.guide-table tr:last-child td{border-bottom:0}.status-chip{display:inline-flex;padding:5px 9px;border-radius:999px;font-size:.7rem;font-weight:850;white-space:nowrap}.status-chip.terminal{background:#E8F8F4;color:#16725F}.status-chip.shuttle{background:#FFF1E5;color:#A14B13}.guide-note{background:#FFF8E1;border:1px solid #F1D98E;padding:14px 16px;border-radius:13px;font-size:.84rem!important;color:#68520E!important}
+.guide-choice-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:22px 0}.guide-choice{background:#fff;border:1px solid var(--line);border-radius:18px;padding:22px}.guide-choice>span{display:grid;place-items:center;width:38px;height:38px;border-radius:12px;background:var(--navy);color:#fff;font-weight:900}.guide-choice h3{color:var(--navy);margin:14px 0 7px}.guide-choice p{color:var(--muted);font-size:.9rem;margin:0}
+.guide-checklist{list-style:none;padding:0;margin:20px 0;display:grid;grid-template-columns:1fr 1fr;gap:11px 18px}.guide-checklist li{position:relative;padding:13px 15px 13px 42px;background:#fff;border:1px solid var(--line);border-radius:14px;color:var(--muted);font-size:.87rem}.guide-checklist li:before{content:'✓';position:absolute;left:14px;top:13px;width:19px;height:19px;border-radius:50%;display:grid;place-items:center;background:#E8F8F4;color:#16725F;font-weight:900;font-size:.7rem}
+.guide-callout{margin:38px 0;background:linear-gradient(135deg,var(--navy),#173E6D);border-radius:24px;padding:30px;display:flex;justify-content:space-between;align-items:center;gap:28px;color:#fff}.guide-callout .mini-label{color:#8FDDF0}.guide-callout h2{color:#fff;font-size:1.9rem;line-height:1.1;margin:0 0 8px;letter-spacing:-.04em}.guide-callout p{color:#C7D7E8;margin:0}.guide-callout .primary-button{flex:0 0 auto}
+.guide-steps{list-style:none;padding:0;margin:20px 0;display:grid;gap:10px}.guide-steps li{display:grid;grid-template-columns:42px 1fr;gap:14px;border:1px solid var(--line);background:#fff;border-radius:15px;padding:15px}.guide-steps li>span{width:38px;height:38px;border-radius:12px;display:grid;place-items:center;background:var(--sky);color:var(--navy);font-weight:900}.guide-steps strong{display:block}.guide-steps p{margin:3px 0 0;color:var(--muted);font-size:.88rem}
+.guide-faq{margin-top:54px}.guide-sources{margin-top:54px;padding-top:28px;border-top:1px solid var(--line)}.guide-sources ul{padding-left:20px}.guide-sources li{margin:8px 0;color:var(--muted)}.guide-sources a{color:#236C9A;text-decoration:underline;text-underline-offset:3px}.guide-updated{font-size:.82rem!important}
+.guide-sidebar{position:sticky;top:112px;display:grid;gap:15px}.guide-sidebar-card{background:#fff;border:1px solid var(--line);border-radius:20px;padding:22px;box-shadow:0 10px 30px rgba(15,39,71,.055)}.guide-sidebar-card h3{margin:0 0 14px;color:var(--navy);font-size:1.25rem}.guide-sidebar-card ul{list-style:none;padding:0;margin:0 0 18px;display:grid;gap:9px}.guide-sidebar-card li{color:var(--muted);font-size:.84rem;padding-left:23px;position:relative}.guide-sidebar-card li:before{content:'✓';position:absolute;left:0;color:#16725F;font-weight:900}.guide-sidebar-card .primary-button{width:100%}.guide-sidebar-card.subtle{box-shadow:none;background:#EEF8FC}.guide-sidebar-card.subtle p{color:var(--muted);font-size:.86rem;margin-bottom:0}
+@media(max-width:950px){.guide-hero-grid{grid-template-columns:1fr;gap:28px}.guide-layout{grid-template-columns:1fr}.guide-sidebar{position:static;grid-template-columns:1fr 1fr}.guide-fact-grid{grid-template-columns:1fr 1fr}.guide-fact-grid>div:nth-child(2){border-right:0}.guide-fact-grid>div:nth-child(-n+2){border-bottom:1px solid var(--line)}}
+@media(max-width:700px){.guide-hero{padding:28px 0 36px}.guide-breadcrumb{margin-bottom:18px;overflow:auto;white-space:nowrap}.guide-hero-grid{gap:20px}.guide-hero-copy h1{font-size:2.55rem;line-height:1.02}.guide-intro{font-size:.96rem;margin:18px 0}.guide-cta-row{align-items:stretch}.guide-cta-row .primary-button{width:100%}.guide-text-link{text-align:center}.guide-hero-image{border-radius:18px}.guide-facts{padding-bottom:44px}.guide-fact-grid{grid-template-columns:1fr 1fr}.guide-fact-grid>div{padding:17px}.guide-fact-grid span{font-size:1.18rem}.guide-section{padding:54px 0 70px}.guide-choice-grid,.guide-checklist,.guide-sidebar{grid-template-columns:1fr}.guide-callout{display:block;padding:23px}.guide-callout .primary-button{margin-top:20px;width:100%}.guide-main>h2,.guide-faq>h2,.guide-sources>h2{margin-top:38px}.guide-table th,.guide-table td{font-size:.78rem}}
+
+/* =========================================================
+   V19 — Mobile polish for SEO and legal pages
+   Keeps desktop unchanged; improves readability and touch use.
+========================================================= */
+@media(max-width:700px){
+  body{overflow-x:hidden}
+  .container{width:min(calc(100% - 22px),1180px)}
+
+  /* Header shared by home + SEO pages */
+  .site-header{backdrop-filter:blur(12px)}
+  .header-inner{height:64px;gap:8px}
+  .brand{min-width:0;flex:1}
+  .brand img.brand-logo{width:min(170px,49vw);height:auto;max-height:42px;object-fit:contain;object-position:left center}
+  .header-actions{gap:7px;flex:0 0 auto}
+  .header-cta{font-size:.72rem;padding:9px 10px;border-radius:10px;white-space:nowrap}
+  .menu-toggle{width:40px;height:40px;border-radius:10px;padding:9px}
+
+  /* Málaga / future airport guides */
+  .guide-hero{padding:22px 0 30px}
+  .guide-breadcrumb{margin-bottom:14px;font-size:.74rem;padding-bottom:2px;scrollbar-width:none}
+  .guide-breadcrumb::-webkit-scrollbar{display:none}
+  .guide-hero-grid{gap:16px}
+  .guide-hero-copy h1{font-size:clamp(2.2rem,11.5vw,2.8rem);line-height:1.01;letter-spacing:-.055em}
+  .guide-intro{font-size:.94rem;line-height:1.55;margin:15px 0 16px}
+  .guide-disclosure{font-size:.7rem;line-height:1.45;margin-top:13px}
+  .guide-cta-row{gap:12px}
+  .guide-cta-row .primary-button{min-height:48px}
+  .guide-text-link{padding:7px 2px;font-size:.86rem}
+  .guide-hero-image{border-radius:16px;box-shadow:0 10px 28px rgba(15,39,71,.08)}
+  .guide-hero-image img{aspect-ratio:16/9;object-fit:cover}
+  .guide-hero-image figcaption{padding:9px 11px;font-size:.68rem;line-height:1.35}
+
+  .guide-facts{padding-bottom:32px}
+  .guide-fact-grid{grid-template-columns:1fr 1fr;border-radius:16px;box-shadow:0 8px 24px rgba(15,39,71,.05)}
+  .guide-fact-grid>div{padding:14px 12px;min-width:0}
+  .guide-fact-grid span{font-size:1.08rem;line-height:1.1}
+  .guide-fact-grid strong{font-size:.76rem;line-height:1.25;margin-top:4px}
+  .guide-fact-grid small{font-size:.64rem;line-height:1.3}
+
+  .guide-section{padding:42px 0 58px}
+  .guide-layout{gap:30px}
+  .guide-main>h2,.guide-faq>h2,.guide-sources>h2{font-size:1.65rem;line-height:1.12;margin:32px 0 12px}
+  .guide-main>h2:first-of-type{margin-top:0}
+  .guide-main>p{font-size:.94rem;line-height:1.65}
+
+  /* Table remains semantically a table, but scrolls naturally on phones */
+  .guide-table-wrap{margin:18px -1px 10px;border-radius:14px;overflow-x:auto;-webkit-overflow-scrolling:touch;box-shadow:none}
+  .guide-table{min-width:690px}
+  .guide-table th,.guide-table td{padding:12px 13px;font-size:.75rem;line-height:1.45}
+  .guide-table th{font-size:.66rem;letter-spacing:.04em;white-space:nowrap}
+  .status-chip{font-size:.63rem;padding:4px 7px}
+  .guide-note{padding:12px 13px;border-radius:11px;font-size:.78rem!important;line-height:1.5}
+
+  .guide-choice-grid,.guide-checklist,.guide-sidebar{grid-template-columns:1fr;gap:11px}
+  .guide-choice{padding:17px;border-radius:15px}
+  .guide-choice>span{width:34px;height:34px;border-radius:10px;font-size:.78rem}
+  .guide-choice h3{font-size:1rem;margin:11px 0 5px}
+  .guide-choice p{font-size:.84rem;line-height:1.55}
+  .guide-checklist{gap:9px;margin:16px 0}
+  .guide-checklist li{padding:11px 12px 11px 38px;border-radius:12px;font-size:.81rem;line-height:1.4}
+  .guide-checklist li:before{left:12px;top:11px}
+
+  .guide-callout{margin:28px 0;border-radius:18px;padding:19px}
+  .guide-callout h2{font-size:1.45rem}
+  .guide-callout p{font-size:.84rem;line-height:1.5}
+  .guide-callout .primary-button{min-height:48px}
+
+  .guide-steps{gap:9px;margin:16px 0}
+  .guide-steps li{grid-template-columns:34px minmax(0,1fr);gap:10px;border-radius:13px;padding:12px}
+  .guide-steps li>span{width:32px;height:32px;border-radius:9px;font-size:.76rem}
+  .guide-steps strong{font-size:.86rem;line-height:1.35}
+  .guide-steps p{font-size:.79rem;line-height:1.5}
+
+  .guide-faq{margin-top:38px}
+  .guide-faq .accordion details{border-radius:13px}
+  .guide-faq .accordion summary{font-size:.85rem;line-height:1.4;padding:15px 42px 15px 14px}
+  .guide-faq .accordion details p{font-size:.81rem;line-height:1.55;padding:0 14px 15px}
+  .guide-sources{margin-top:38px;padding-top:22px}
+  .guide-sources ul{padding-left:18px}
+  .guide-sources li{font-size:.8rem;line-height:1.5;overflow-wrap:anywhere}
+  .guide-updated{font-size:.74rem!important;overflow-wrap:anywhere}
+
+  .guide-sidebar{gap:11px}
+  .guide-sidebar-card{padding:17px;border-radius:16px;box-shadow:none}
+  .guide-sidebar-card h3{font-size:1.08rem}
+  .guide-sidebar-card li{font-size:.8rem}
+
+  /* Footer shared */
+  .footer-top{grid-template-columns:1fr;gap:26px}
+  .footer-brand{grid-column:auto}
+  .footer-top>div:last-child{grid-column:auto}
+  .brand img.footer-logo{width:min(230px,72vw);height:auto}
+  .site-footer{padding-top:38px}
+
+  /* Cookie UI — safe area + small screens */
+  .cookie-banner{padding:10px max(10px,env(safe-area-inset-right)) max(10px,env(safe-area-inset-bottom)) max(10px,env(safe-area-inset-left))}
+  .cookie-banner-inner{padding:16px;border-radius:16px;max-height:88vh;overflow:auto}
+  .cookie-copy h2{font-size:1.15rem}
+  .cookie-copy p{font-size:.8rem;line-height:1.45}
+  .cookie-actions{width:100%;gap:8px}
+  .cookie-button{min-height:44px;font-size:.76rem}
+  .cookie-modal{width:min(calc(100% - 20px),560px);max-height:88vh;overflow:auto;border-radius:18px;padding:18px}
+  .cookie-category{gap:12px}
+
+  /* Legal pages */
+  .legal-main{padding:26px 0 54px!important}
+  .legal-shell{width:min(calc(100% - 22px),900px)!important}
+  .legal-back{margin-bottom:15px!important;font-size:.82rem}
+  .legal-card{padding:20px 16px!important;border-radius:16px!important;box-shadow:0 10px 28px rgba(15,39,71,.06)!important}
+  .legal-card h1{font-size:clamp(2rem,10vw,2.7rem)!important;line-height:1.02!important;margin-bottom:14px!important}
+  .legal-card h2{font-size:1.2rem!important;margin:28px 0 9px!important;line-height:1.25}
+  .legal-card h3{font-size:.96rem!important}
+  .legal-card p,.legal-card li{font-size:.86rem;line-height:1.62!important}
+  .legal-card ul{padding-left:18px!important}
+  .legal-note{padding:12px 13px!important;border-radius:9px!important}
+  .legal-table{display:block!important;width:100%!important;overflow-x:auto!important;-webkit-overflow-scrolling:touch;white-space:normal!important;font-size:.78rem!important}
+  .legal-table tbody{display:table;min-width:560px;width:100%}
+  .legal-table th,.legal-table td{padding:10px 9px!important;overflow-wrap:anywhere}
+}
+
+@media(max-width:390px){
+  .container{width:min(calc(100% - 18px),1180px)}
+  .brand img.brand-logo{width:min(150px,46vw)}
+  .header-cta{font-size:.66rem;padding:8px 8px}
+  .guide-hero-copy h1{font-size:2.12rem}
+  .guide-fact-grid>div{padding:12px 10px}
+  .guide-fact-grid strong{font-size:.72rem}
+  .guide-main>h2,.guide-faq>h2,.guide-sources>h2{font-size:1.5rem}
+  .legal-shell{width:min(calc(100% - 16px),900px)!important}
+  .legal-card{padding:18px 13px!important}
+}

@@ -7,3 +7,10 @@ Mobile spacing update only:
 - desktop layout unchanged
 
 Upload all files in this folder to the root of the GitHub repository.
+
+
+## Version 17
+Added six illustrated premium airport cards for AGP, ALC, PMI, TFS, VLC and BCN.
+
+
+SEO v18: Added `malaga-airport-car-rental.html`, linked it from the Málaga airport card and added it to sitemap.xml.
