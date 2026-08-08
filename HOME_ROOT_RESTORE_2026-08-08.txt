@@ -1,0 +1,6 @@
+ViajeroLatam homepage root restore — 2026-08-08
+- / serves /index.html (the main insurance comparator homepage).
+- /guia-viajero-latam/ remains the free guide landing page only.
+- Keeps the USA+Canada results USD adjustment.
+- Keeps destination choices limited to España/Schengen, Europa completa, Estados Unidos + Canadá, Mundial.
+- No other page content changed.
