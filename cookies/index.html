@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+
+<html lang="es"><head>
+
+<script id="vl-consent-bootstrap">
+window.dataLayer=window.dataLayer||[];
+window.gtag=window.gtag||function(){window.dataLayer.push(arguments);};
+(function(){
+  var analytics='denied';
+  var marketing='denied';
+  try{
+    var raw=localStorage.getItem('vl_cookie_consent_v1');
+    if(raw){
+      var saved=JSON.parse(raw);
+      if(saved&&saved.version===1&&saved.expiresAt>Date.now()){
+        analytics=saved.analytics?'granted':'denied';
+        marketing=saved.marketing?'granted':'denied';
+      }else{
+        localStorage.removeItem('vl_cookie_consent_v1');
+      }
+    }
+  }catch(error){}
+  gtag('consent','default',{
+    analytics_storage:analytics,
+    ad_storage:marketing,
+    ad_user_data:marketing,
+    ad_personalization:marketing,
+    wait_for_update:500
+  });
+})();
+</script>
+<link rel="stylesheet" href="/assets/vl-cookie-consent.css">
+<script defer src="/assets/vl-cookie-consent.js"></script>
+
+<link as="image" href="/hero-bg.webp" rel="preload" type="image/webp"/><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<!-- Favicon / browser tab icon -->
+<link rel="icon" href="/favicon.ico" sizes="any"/>
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"/>
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png"/>
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"/>
+<link rel="manifest" href="/site.webmanifest"/>
+<meta name="theme-color" content="#0B1F3A"/>
+<title>Cookies | ViajeroLatam</title><meta content="Política de cookies de ViajeroLatam." name="description"/><link href="https://viajerolatam.com/cookies/" rel="canonical"/><style>body{font-family:Arial,sans-serif;line-height:1.7;color:#0B1F3A;padding:40px;max-width:900px;margin:auto}a{color:#0B1F3A}</style><style id="webp-hero">@supports(background-image:url("data:image/webp,")){.hero,section.hero{background-image:url('/hero-bg.webp')!important}}</style>
+<meta content="es_CO" property="og:locale"/>
+<meta content="ViajeroLatam" property="og:site_name"/>
+<meta content="https://viajerolatam.com/og-image.jpg" property="og:image"/>
+</head>
+<body><p><a href="/">← Volver a ViajeroLatam</a></p><h1>Cookies</h1><p>Política de cookies de ViajeroLatam.</p></body></html>
