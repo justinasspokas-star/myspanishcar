@@ -1,9 +1,0 @@
-<svg viewBox="0 0 320 170" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="SUV illustration">
-  <ellipse cx="160" cy="144" rx="120" ry="14" fill="#DCE4EC"/>
-  <path d="M40 111l11-39c4-13 15-22 29-24l99-10c18-2 34 3 45 15l34 37 25 8c10 3 16 12 16 22v11H31v-5c0-8 3-12 9-15z" fill="#0BA4C6" stroke="#0F2747" stroke-width="5"/>
-  <path d="M84 52h92c15 0 27 4 38 15l20 22H69l15-37z" fill="#DDF3FF" stroke="#0F2747" stroke-width="5"/>
-  <path d="M151 50v39M219 67l-22 22" stroke="#0F2747" stroke-width="4"/>
-  <circle cx="86" cy="128" r="24" fill="#0F2747"/><circle cx="86" cy="128" r="11" fill="#F8FAFC"/>
-  <circle cx="250" cy="128" r="24" fill="#0F2747"/><circle cx="250" cy="128" r="11" fill="#F8FAFC"/>
-  <path d="M42 111h22M270 105h20" stroke="#fff" stroke-width="5" stroke-linecap="round"/>
-</svg>
