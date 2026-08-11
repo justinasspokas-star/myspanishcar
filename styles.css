@@ -1036,3 +1036,194 @@ h1 mark::after{right:18%;height:6px;bottom:-10px}
 .partner-results-section .affiliate-inline-disclosure{margin:18px 0 0}
 @media(max-width:1020px){.live-partner-card{grid-template-columns:170px 1fr}.live-partner-action{grid-column:1/-1;display:grid;grid-template-columns:1fr 220px;gap:8px 18px;align-items:center;text-align:left;border-top:1px solid var(--line);padding-top:18px}.live-partner-action .partner-status{margin:0;justify-self:start}.live-partner-action .live-affiliate-button{grid-column:2;grid-row:1/3}.live-partner-action small{margin:0}}
 @media(max-width:700px){.partner-results-section{padding-top:54px!important;padding-bottom:58px!important}.partner-results-heading{margin-bottom:18px}.partner-results-heading h2{font-size:1.8rem}.live-partner-card{display:block;padding:19px 17px;border-radius:18px}.live-partner-brand{display:block;border-right:0;border-bottom:1px solid var(--line);padding:0 0 15px;margin-bottom:15px}.live-partner-brand .affiliate-badge{margin-bottom:11px}.partner-wordmark{font-size:1.65rem}.live-partner-copy h3{font-size:1.12rem}.live-partner-copy>p{font-size:.82rem}.live-partner-search-context{display:grid;grid-template-columns:1fr;margin-top:13px}.live-partner-search-context span{align-items:flex-start;flex-direction:column;gap:2px}.live-partner-action{display:flex;text-align:center;border-top:1px solid var(--line);padding-top:16px;margin-top:16px}.live-partner-action .partner-status{align-self:flex-start}.live-partner-action .live-affiliate-button{width:100%}.partner-coming-card{padding:14px 15px}.partner-coming-card p{font-size:.73rem}}
+
+/* =========================================================
+   V23 — Málaga guide hero refinement
+   Full-car image, cleaner hierarchy, responsive desktop/mobile
+========================================================= */
+.guide-page .guide-hero{
+  padding:44px 0 48px;
+  background:linear-gradient(180deg,#f7fbfe 0%,#ffffff 100%);
+}
+.guide-page .guide-hero-grid{
+  grid-template-columns:minmax(0,1.02fr) minmax(420px,.82fr);
+  gap:48px;
+  align-items:center;
+}
+.guide-page .guide-hero-copy{min-width:0}
+.guide-page .guide-hero-copy h1{
+  font-size:clamp(3rem,4.65vw,4.65rem);
+  line-height:.98;
+  letter-spacing:-.058em;
+  margin:0;
+}
+.guide-page .guide-intro{
+  max-width:660px;
+  font-size:1.04rem;
+  line-height:1.62;
+  margin:21px 0 20px;
+}
+.guide-page .guide-cta-row{gap:16px}
+.guide-page .guide-cta-row .primary-button{
+  min-height:52px;
+  padding:0 22px;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+}
+.guide-page .guide-text-link{
+  padding:11px 0 7px;
+  font-size:.92rem;
+}
+.guide-page .guide-disclosure{
+  margin-top:18px;
+  padding:12px 14px;
+  border:1px solid #e5edf4;
+  border-radius:13px;
+  background:#fbfdff;
+  line-height:1.5;
+  max-width:620px;
+}
+.guide-page .guide-hero-image{
+  margin:0;
+  border-radius:24px;
+  overflow:hidden;
+  border:1px solid #e3eaf0;
+  background:#f4f8fb;
+  box-shadow:0 22px 55px rgba(15,39,71,.11);
+}
+.guide-page .guide-hero-image img{
+  display:block;
+  width:100%;
+  height:auto;
+  aspect-ratio:auto;
+  object-fit:contain;
+  object-position:center;
+  background:#edf4f8;
+}
+.guide-page .guide-hero-image figcaption{
+  background:#fff;
+  border-top:1px solid #edf1f4;
+  padding:11px 15px;
+}
+
+@media (min-width:951px){
+  .guide-page .guide-hero-image{
+    max-width:540px;
+    justify-self:end;
+  }
+  .guide-page .guide-hero-image img{
+    max-height:590px;
+    object-fit:contain;
+  }
+}
+
+@media (max-width:1100px) and (min-width:951px){
+  .guide-page .guide-hero-grid{
+    grid-template-columns:minmax(0,1fr) minmax(360px,.78fr);
+    gap:34px;
+  }
+  .guide-page .guide-hero-copy h1{font-size:clamp(2.85rem,5vw,4rem)}
+}
+
+@media (max-width:950px){
+  .guide-page .guide-hero{padding:30px 0 34px}
+  .guide-page .guide-hero-grid{
+    grid-template-columns:1fr;
+    gap:22px;
+  }
+  .guide-page .guide-hero-copy{max-width:760px}
+  .guide-page .guide-hero-image{
+    width:min(100%,640px);
+    justify-self:center;
+  }
+  .guide-page .guide-hero-image img{
+    width:100%;
+    max-height:none;
+  }
+}
+
+@media (max-width:700px){
+  .guide-page .guide-hero{padding:18px 0 24px}
+  .guide-page .guide-breadcrumb{margin-bottom:10px}
+  .guide-page .guide-hero-grid{gap:14px}
+  .guide-page .guide-hero-copy h1{
+    font-size:clamp(2.05rem,10.8vw,2.62rem);
+    line-height:1.01;
+    letter-spacing:-.052em;
+  }
+  .guide-page .guide-intro{
+    font-size:.92rem;
+    line-height:1.5;
+    margin:13px 0 14px;
+  }
+  .guide-page .guide-cta-row{
+    display:grid;
+    grid-template-columns:1fr;
+    gap:9px;
+  }
+  .guide-page .guide-cta-row .primary-button{
+    width:100%;
+    min-height:46px;
+    padding:0 16px;
+  }
+  .guide-page .guide-text-link{
+    width:100%;
+    min-height:44px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    border:1px solid #dbe4ec;
+    border-radius:12px;
+    background:#fff;
+    text-decoration:none;
+  }
+  .guide-page .guide-disclosure{
+    margin-top:10px;
+    padding:10px 11px;
+    font-size:.68rem;
+    line-height:1.4;
+  }
+  .guide-page .guide-hero-image{
+    width:100%;
+    border-radius:16px;
+    box-shadow:0 10px 26px rgba(15,39,71,.08);
+  }
+  .guide-page .guide-hero-image img{
+    width:100%;
+    height:auto;
+    aspect-ratio:auto;
+    object-fit:contain;
+  }
+  .guide-page .guide-hero-image figcaption{
+    padding:8px 10px;
+    font-size:.66rem;
+  }
+  .guide-page .guide-facts{padding-bottom:26px}
+  .guide-page .guide-section{padding-top:36px}
+}
+
+@media (max-width:420px){
+  .guide-page .guide-hero-copy h1{font-size:2rem}
+  .guide-page .guide-intro{font-size:.88rem}
+  .guide-page .guide-hero-image{border-radius:14px}
+}
+
+/* V23b — landscape full-car artwork */
+@media (min-width:951px){
+  .guide-page .guide-hero-grid{
+    grid-template-columns:minmax(0,1fr) minmax(480px,.96fr);
+    gap:46px;
+  }
+  .guide-page .guide-hero-image{max-width:620px}
+  .guide-page .guide-hero-image img{
+    width:100%;
+    height:auto;
+    max-height:none;
+    aspect-ratio:auto;
+    object-fit:contain;
+  }
+}
+@media (max-width:950px){
+  .guide-page .guide-hero-image{width:min(100%,720px)}
+}
