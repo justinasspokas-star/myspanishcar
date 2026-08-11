@@ -1227,3 +1227,10 @@ h1 mark::after{right:18%;height:6px;bottom:-10px}
 @media (max-width:950px){
   .guide-page .guide-hero-image{width:min(100%,720px)}
 }
+
+/* v24 airport SEO cluster */
+.guide-related{margin-top:54px;padding-top:28px;border-top:1px solid var(--line)}
+.guide-related>h2{font-size:clamp(1.8rem,3vw,2.7rem);line-height:1.12;letter-spacing:-.045em;color:var(--navy);margin:10px 0 22px}
+.guide-related-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important;margin-top:18px}
+.guide-related-grid .airport-card{min-width:0}
+@media(max-width:700px){.guide-related{margin-top:38px;padding-top:22px}.guide-related>h2{font-size:1.5rem;margin:8px 0 16px}.guide-related-grid{grid-template-columns:1fr!important}}

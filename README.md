@@ -18,3 +18,7 @@ SEO v18: Added `malaga-airport-car-rental.html`, linked it from the Málaga airp
 
 ## v21 affiliate integration
 Centauro Spain CJ Affiliate tracking link integrated on the Málaga Airport guide. Affiliate clicks are tagged as `affiliate_click` in GA4 when analytics consent is available.
+
+
+## SEO airport cluster v24
+Added dedicated, indexable airport car-rental guides for Alicante (ALC), Palma (PMI), Tenerife South (TFS), Valencia (VLC), Barcelona (BCN) and Madrid (MAD), plus updated internal links and sitemap.
