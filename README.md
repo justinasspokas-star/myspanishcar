@@ -14,3 +14,7 @@ Added six illustrated premium airport cards for AGP, ALC, PMI, TFS, VLC and BCN.
 
 
 SEO v18: Added `malaga-airport-car-rental.html`, linked it from the Málaga airport card and added it to sitemap.xml.
+
+
+## v21 affiliate integration
+Centauro Spain CJ Affiliate tracking link integrated on the Málaga Airport guide. Affiliate clicks are tagged as `affiliate_click` in GA4 when analytics consent is available.

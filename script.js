@@ -144,3 +144,18 @@ if (menuToggle && mobileMenu) {
     if (window.innerWidth > 1020) setMobileMenu(false);
   });
 }
+
+
+// Affiliate click tracking
+document.querySelectorAll('a[data-affiliate-partner]').forEach(link => {
+  link.addEventListener('click', () => {
+    if (typeof window.gtag === 'function') {
+      window.gtag('event', 'affiliate_click', {
+        affiliate_partner: link.dataset.affiliatePartner || 'unknown',
+        affiliate_network: link.dataset.affiliateNetwork || 'unknown',
+        affiliate_market: link.dataset.affiliateMarket || 'unknown',
+        link_url: link.href
+      });
+    }
+  });
+});
