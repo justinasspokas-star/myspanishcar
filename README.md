@@ -22,3 +22,7 @@ Centauro Spain CJ Affiliate tracking link integrated on the Málaga Airport guid
 
 ## SEO airport cluster v24
 Added dedicated, indexable airport car-rental guides for Alicante (ALC), Palma (PMI), Tenerife South (TFS), Valencia (VLC), Barcelona (BCN) and Madrid (MAD), plus updated internal links and sitemap.
+
+
+## v26 SEO guides
+Added `car-rental-spain-without-credit-card.html` and `car-rental-spain-low-deposit.html`, updated internal links and sitemap.
