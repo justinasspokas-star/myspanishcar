@@ -1234,3 +1234,16 @@ h1 mark::after{right:18%;height:6px;bottom:-10px}
 .guide-related-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important;margin-top:18px}
 .guide-related-grid .airport-card{min-width:0}
 @media(max-width:700px){.guide-related{margin-top:38px;padding-top:22px}.guide-related>h2{font-size:1.5rem;margin:8px 0 16px}.guide-related-grid{grid-template-columns:1fr!important}}
+
+/* =========================================================
+   V25 — Commercial SEO guide: debit-card car rental in Spain
+========================================================= */
+.status-chip.debit-yes{background:#E8F8F4;color:#16725F}
+.status-chip.debit-conditional{background:#FFF1E5;color:#A14B13}
+.topic-guide-image picture{display:block}
+.topic-guide-image img{object-position:center 52%}
+.topic-guide-hero .guide-hero-copy h1{max-width:720px}
+@media(max-width:700px){
+  .topic-guide-image img{object-position:center center}
+  .topic-guide-hero .guide-intro{max-width:100%}
+}
