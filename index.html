@@ -46,7 +46,7 @@
   <meta name="twitter:description" content="Compare price, deposit, card requirements and insurance before you book.">
   <meta name="twitter:image" content="https://myspanishcar.com/assets/social-preview.jpg?v=4">
   <meta name="twitter:image:alt" content="MySpanishCar car rental comparison in Spain">
-  <link rel="stylesheet" href="styles.css?v=20">
+  <link rel="stylesheet" href="styles.css?v=22">
   <script type="application/ld+json">
   {
     "@context":"https://schema.org",
@@ -208,91 +208,44 @@
       </div>
     </section>
 
-    <section class="results-section" id="results">
+    <section class="results-section partner-results-section" id="results">
       <div class="container">
-        <div class="section-heading split-heading">
-          <div>
-            <p class="mini-label">Example comparison</p>
-            <h2>Offers that explain more than the daily price</h2>
-            <p id="results-summary">Select your dates and location to update this preview.</p>
-          </div>
-          <div class="results-controls">
-            <label>Sort by
-              <select id="sort-results">
-                <option value="recommended">Recommended</option>
-                <option value="price">Lowest price</option>
-                <option value="deposit">Lowest deposit</option>
-              </select>
-            </label>
-          </div>
+        <div class="section-heading partner-results-heading">
+          <p class="mini-label">Approved rental partner</p>
+          <h2>Check live car rental prices in Spain</h2>
+          <p id="results-summary">Choose your pickup location and dates above. We will show approved partners that can serve your search.</p>
         </div>
 
-        <div class="demo-notice"><strong>Design preview:</strong> these are example offers, not live inventory. Connect your affiliate widget or API before launch.</div>
+        <div class="partner-results-list" id="partner-results-list">
+          <article class="live-partner-card" id="centauro-partner-card">
+            <div class="live-partner-brand">
+              <span class="affiliate-badge">Approved affiliate partner</span>
+              <div class="partner-wordmark" aria-label="Centauro Rent a Car">centauro<span>rent a car</span></div>
+            </div>
 
-        <div class="results-list" id="results-list">
-          <article class="result-card" data-daily="18" data-deposit="300" data-score="92" data-card="debit">
-            <div class="car-image"><img src="assets/car-economy.svg" alt="Yellow economy car illustration"></div>
-            <div class="car-main">
-              <div class="card-title-row"><div><span class="deal-tag">Best value</span><h3>Seat Ibiza <small>or similar</small></h3></div><span class="rating"><strong>8.9</strong>/10</span></div>
-              <p class="car-meta">Economy · 5 seats · Manual · 1 large bag</p>
-              <div class="condition-grid">
-                <span><b>Card</b> Debit accepted</span>
-                <span><b>Deposit</b> €300 refundable</span>
-                <span><b>Fuel</b> Full to full</span>
-                <span><b>Pickup</b> Airport desk</span>
+            <div class="live-partner-copy">
+              <h3>Centauro Rent a Car</h3>
+              <p>Check current cars, prices and availability directly with Centauro for rentals in Spain. Final deposit, card, fuel and insurance conditions are confirmed on the partner website.</p>
+              <div class="live-partner-search-context" aria-live="polite">
+                <span><b>Pickup</b><strong id="partner-search-location">Spain</strong></span>
+                <span><b>Dates</b><strong id="partner-search-dates">Choose your dates above</strong></span>
               </div>
             </div>
-            <div class="price-panel">
-              <small>Example total</small>
-              <strong class="total-price">€126</strong>
-              <span><b class="daily-price">€18</b> / day</span>
-              <button class="partner-button" type="button" data-car="Seat Ibiza or similar">View offer</button>
-              <small>No booking fee from MySpanishCar</small>
+
+            <div class="live-partner-action">
+              <span class="partner-status"><i aria-hidden="true"></i> Live partner</span>
+              <a class="partner-button live-affiliate-button" href="https://www.kqzyfj.com/click-101848711-15165285" target="_blank" rel="sponsored noopener noreferrer" data-affiliate-partner="centauro" data-affiliate-network="cj" data-affiliate-market="ES" data-affiliate-placement="homepage_search">Check Centauro prices <span aria-hidden="true">→</span></a>
+              <small>Booking and payment are completed on Centauro.</small>
             </div>
           </article>
 
-          <article class="result-card" data-daily="34" data-deposit="600" data-score="86" data-card="credit">
-            <div class="car-image"><img src="assets/car-suv.svg" alt="Blue compact SUV illustration"></div>
-            <div class="car-main">
-              <div class="card-title-row"><div><span class="deal-tag neutral">Family choice</span><h3>Nissan Qashqai <small>or similar</small></h3></div><span class="rating"><strong>8.6</strong>/10</span></div>
-              <p class="car-meta">Compact SUV · 5 seats · Automatic · 3 bags</p>
-              <div class="condition-grid">
-                <span><b>Card</b> Credit card required</span>
-                <span><b>Deposit</b> €600 refundable</span>
-                <span><b>Fuel</b> Full to full</span>
-                <span><b>Pickup</b> Free shuttle</span>
-              </div>
-            </div>
-            <div class="price-panel">
-              <small>Example total</small>
-              <strong class="total-price">€238</strong>
-              <span><b class="daily-price">€34</b> / day</span>
-              <button class="partner-button" type="button" data-car="Nissan Qashqai or similar">View offer</button>
-              <small>Conditions checked before redirect</small>
-            </div>
-          </article>
-
-          <article class="result-card" data-daily="42" data-deposit="500" data-score="89" data-card="debit">
-            <div class="car-image"><img src="assets/car-convertible.svg" alt="Red convertible illustration"></div>
-            <div class="car-main">
-              <div class="card-title-row"><div><span class="deal-tag warm">Spain experience</span><h3>Fiat 500 Cabrio <small>or similar</small></h3></div><span class="rating"><strong>9.0</strong>/10</span></div>
-              <p class="car-meta">Convertible · 4 seats · Automatic · 1 bag</p>
-              <div class="condition-grid">
-                <span><b>Card</b> Debit with selected cover</span>
-                <span><b>Deposit</b> €500 refundable</span>
-                <span><b>Fuel</b> Full to full</span>
-                <span><b>Pickup</b> Airport desk</span>
-              </div>
-            </div>
-            <div class="price-panel">
-              <small>Example total</small>
-              <strong class="total-price">€294</strong>
-              <span><b class="daily-price">€42</b> / day</span>
-              <button class="partner-button" type="button" data-car="Fiat 500 Cabrio or similar">View offer</button>
-              <small>Final price confirmed by partner</small>
-            </div>
-          </article>
+          <aside class="partner-coming-card" aria-label="More rental partners coming soon">
+            <div class="partner-coming-icon" aria-hidden="true">+</div>
+            <div><strong>More rental partners coming soon</strong><p>We are adding approved providers as partnerships go live, so MySpanishCar can compare more options for Spain.</p></div>
+          </aside>
         </div>
+
+        <p class="affiliate-inline-disclosure"><strong>Affiliate disclosure:</strong> MySpanishCar may earn a commission if you complete a booking through an affiliate link, at no extra cost to you. <a href="affiliate-disclosure.html">How our affiliate links work</a>.</p>
       </div>
     </section>
 
@@ -381,7 +334,7 @@
         <a class="brand inverse" href="#top" aria-label="MySpanishCar home"><img class="brand-logo footer-logo" src="assets/myspanishcar-header-logo.png?v=3" alt="MySpanishCar" width="660" height="138"></a>
         <p>Car rental comparison in Spain for international travellers.</p>
       </div>
-      <div><strong>Compare</strong><a href="#search">Search cars</a><a href="#airports">Airports</a><a href="malaga-airport-car-rental.html">Málaga Airport guide</a><a href="#results">Example results</a></div>
+      <div><strong>Compare</strong><a href="#search">Search cars</a><a href="#airports">Airports</a><a href="malaga-airport-car-rental.html">Málaga Airport guide</a><a href="#results">Rental partners</a></div>
       <div><strong>About</strong><a href="#why-us">How it works</a><a href="#faq">FAQ</a><a href="mailto:justinasspokas@gmail.com">Contact</a></div>
       <div><strong>Legal</strong><a href="affiliate-disclosure.html">Affiliate disclosure</a><a href="privacy.html">Privacy</a><a href="cookies.html">Cookies</a><button class="footer-link-button" type="button" data-cookie-settings>Cookie settings</button></div>
     </div>
@@ -445,6 +398,6 @@
   </div>
 
   <script src="consent.js?v=8" defer></script>
-  <script src="script.js?v=14" defer></script>
+  <script src="script.js?v=22" defer></script>
 </body>
 </html>
