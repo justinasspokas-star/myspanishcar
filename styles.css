@@ -1247,3 +1247,10 @@ h1 mark::after{right:18%;height:6px;bottom:-10px}
   .topic-guide-image img{object-position:center center}
   .topic-guide-hero .guide-intro{max-width:100%}
 }
+
+/* v27 SEO expansion: language + intent/location cards */
+.lang-switch{display:inline-flex;align-items:center;gap:.45rem;margin-top:.9rem;padding:.5rem .75rem;border:1px solid rgba(15,39,71,.16);border-radius:999px;background:#fff;color:#0f2747;font-weight:800;font-size:.86rem;text-decoration:none;box-shadow:0 8px 24px rgba(15,39,71,.06)}
+.lang-switch:hover{transform:translateY(-1px);box-shadow:0 10px 26px rgba(15,39,71,.1)}
+.intent-location-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1rem;margin:1.2rem 0 1.7rem}.intent-location-card{padding:1.15rem;border:1px solid rgba(15,39,71,.12);border-radius:18px;background:linear-gradient(180deg,#fff,#f8fbfe);box-shadow:0 12px 32px rgba(15,39,71,.06)}.intent-location-card h3{margin:.15rem 0 .55rem;color:#0f2747}.intent-location-card p{margin:0 0 .75rem}.intent-location-card a{font-weight:800;color:#0f2747;text-decoration-color:#f3bd38;text-decoration-thickness:2px;text-underline-offset:4px}
+.nl-badge{display:inline-flex;padding:.28rem .55rem;border-radius:999px;background:#e9f7ff;color:#0d5e85;font-size:.76rem;font-weight:900;letter-spacing:.04em;text-transform:uppercase}
+@media(max-width:700px){.intent-location-grid{grid-template-columns:1fr}.lang-switch{margin-top:.7rem}}
