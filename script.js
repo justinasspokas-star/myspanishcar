@@ -129,16 +129,23 @@ if (menuToggle && mobileMenu) {
 }
 
 // Affiliate click tracking
-// Only fires when Google Analytics has been enabled through the site's consent flow.
+// Fires only when Google Analytics has been enabled through the site's consent flow.
 document.querySelectorAll('a[data-affiliate-partner]').forEach(link => {
   link.addEventListener('click', () => {
     if (typeof window.gtag === 'function') {
+      const provider = link.dataset.affiliatePartner || 'unknown';
       window.gtag('event', 'affiliate_click', {
-        affiliate_partner: link.dataset.affiliatePartner || 'unknown',
+        affiliate_provider: provider,
+        affiliate_partner: provider,
         affiliate_network: link.dataset.affiliateNetwork || 'unknown',
         affiliate_market: link.dataset.affiliateMarket || 'unknown',
         affiliate_placement: link.dataset.affiliatePlacement || 'unknown',
+        placement: link.dataset.affiliatePlacement || 'unknown',
+        airport: link.dataset.affiliateAirport || pickup?.value || '',
         search_location: pickup?.value || '',
+        page_location: window.location.href,
+        page_path: window.location.pathname,
+        destination_url: link.href,
         link_url: link.href
       });
     }

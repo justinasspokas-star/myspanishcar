@@ -21,7 +21,7 @@
 <link href="assets/favicon-32x32.png?v=2" rel="icon" sizes="32x32" type="image/png"/>
 <link href="assets/favicon.ico?v=2" rel="shortcut icon"/>
 <link href="assets/apple-touch-icon.png?v=2" rel="apple-touch-icon" sizes="180x180"/>
-<link href="styles.css?v=30" rel="stylesheet"/>
+<link href="styles.css?v=33" rel="stylesheet"/>
 <meta content="article" property="og:type"/>
 <meta content="MySpanishCar" property="og:site_name"/>
 <meta content="en_GB" property="og:locale"/>
@@ -33,7 +33,7 @@
 <meta content="Car Rental Spain With Debit Card | MySpanishCar" name="twitter:title"/>
 <meta content="A practical 2026 guide to debit-card car rental rules in Spain." name="twitter:description"/>
 <meta content="https://myspanishcar.com/assets/hero-premium-desktop.webp?v=15" name="twitter:image"/>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Car Rental Spain With Debit Card: Companies & Deposit Rules","description":"Rent a car in Spain with a debit card: compare current rules from Centauro, Wiber, SIXT, Europcar, OK Mobility, Goldcar and Hertz, including physical-card and deposit requirements.","datePublished":"2026-08-11","dateModified":"2026-09-11","author":{"@type":"Person","name":"Justinas Spokas"},"publisher":{"@type":"Organization","name":"MySpanishCar","url":"https://myspanishcar.com/"},"mainEntityOfPage":"https://myspanishcar.com/car-rental-spain-with-debit-card.html","image":"https://myspanishcar.com/assets/hero-premium-desktop.webp?v=15"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Car Rental Spain With Debit Card: Companies & Deposit Rules","description":"Rent a car in Spain with a debit card: compare current rules from Centauro, Wiber, SIXT, Europcar, OK Mobility, Goldcar and Hertz, including physical-card and deposit requirements.","datePublished":"2026-08-11","dateModified":"2026-10-01","author":{"@type":"Person","name":"Justinas Spokas"},"publisher":{"@type":"Organization","name":"MySpanishCar","url":"https://myspanishcar.com/"},"mainEntityOfPage":"https://myspanishcar.com/car-rental-spain-with-debit-card.html","image":"https://myspanishcar.com/assets/hero-premium-desktop.webp?v=15"}</script>
 <script type="application/ld+json">
   {
     "@context":"https://schema.org",
@@ -207,7 +207,7 @@
 <h2>Sources &amp; editorial methodology</h2>
 <p>We use current supplier help pages and rental terms for payment-card claims. We avoid labelling a company “debit-card friendly” when the supplier only confirms online payment or when the pickup rule is unclear.</p>
 <ul><li><a href="https://www.centauro.net/en/help-center/how-to-pay/" rel="noopener" target="_blank">Centauro — payment methods and card requirements</a></li><li><a href="https://www.centauro.net/en/help-center/prices-and-cover/" rel="noopener" target="_blank">Centauro — deposit and SMART cover</a></li><li><a href="https://www.wiberrentacar.com/en/faq/excess-fee-and-fuel-policy/who-takes-the-deposit-and-when" rel="noopener" target="_blank">Wiber — accepted payment cards</a></li><li><a href="https://www.sixt.es/help-center/articles/que-tarjetas-se-aceptan-en-la-recogida/" rel="noopener" target="_blank">SIXT Spain — cards accepted at pickup</a></li><li><a href="https://www.europcar.es/es-es/faq?question=puedo-usar-una-tarjeta-de-debito" rel="noopener" target="_blank">Europcar Spain — debit-card FAQ</a></li><li><a href="https://okmobility.com/es/help/alquilar-un-vehiculo/metodo-de-pago" rel="noopener" target="_blank">OK Mobility — payment method and debit-card rules</a></li><li><a href="https://www.goldcar.es/es-es/alquiler-de-coches/servicios-extra/requisitos-alquiler-coches/" rel="noopener" target="_blank">Goldcar — rental requirements and payment methods</a></li><li><a href="https://www.hertz.es/p/informacion-tarjeta-debito" rel="noopener" target="_blank">Hertz Spain — debit-card information</a></li></ul>
-<p class="guide-updated">Last editorial review: 11 September 2026. Supplier policies can change. If you spot an outdated condition, contact <a href="mailto:justinasspokas@gmail.com">justinasspokas@gmail.com</a>.</p>
+<p class="guide-updated">Last editorial review: 1 October 2026. Card acceptance can vary by office, rate and vehicle category.</p>
 </section>
 </article>
 <aside class="guide-sidebar">
@@ -251,7 +251,7 @@
     const menuToggle=document.querySelector('.menu-toggle'), mobileMenu=document.querySelector('#mobile-menu');
     function setMobileMenu(open){if(!menuToggle||!mobileMenu)return;menuToggle.setAttribute('aria-expanded',String(open));menuToggle.setAttribute('aria-label',open?'Close navigation menu':'Open navigation menu');mobileMenu.setAttribute('aria-hidden',String(!open));mobileMenu.classList.toggle('is-open',open)}
     if(menuToggle&&mobileMenu){menuToggle.addEventListener('click',()=>setMobileMenu(menuToggle.getAttribute('aria-expanded')!=='true'));mobileMenu.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>setMobileMenu(false)));document.addEventListener('keydown',e=>{if(e.key==='Escape')setMobileMenu(false)});document.addEventListener('click',e=>{if(!e.target.closest('.site-header'))setMobileMenu(false)});}
-    document.querySelectorAll('[data-affiliate-partner]').forEach(link=>link.addEventListener('click',()=>{if(typeof gtag==='function'){gtag('event','affiliate_click',{partner:link.dataset.affiliatePartner||'',network:link.dataset.affiliateNetwork||'',market:link.dataset.affiliateMarket||'',placement:link.dataset.affiliatePlacement||''});}}));
+    document.querySelectorAll('[data-affiliate-partner]').forEach(link=>link.addEventListener('click',()=>{if(typeof gtag==='function'){const provider=link.dataset.affiliatePartner||'unknown';gtag('event','affiliate_click',{affiliate_provider:provider,affiliate_partner:provider,affiliate_network:link.dataset.affiliateNetwork||'unknown',affiliate_market:link.dataset.affiliateMarket||'unknown',affiliate_placement:link.dataset.affiliatePlacement||'unknown',placement:link.dataset.affiliatePlacement||'unknown',airport:link.dataset.affiliateAirport||'',page_location:window.location.href,page_path:window.location.pathname,destination_url:link.href,link_url:link.href});}}));
   </script>
 </body>
 </html>
