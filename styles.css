@@ -1297,3 +1297,182 @@ h1 mark::after{right:18%;height:6px;bottom:-10px}
   .compact-evidence-grid{grid-template-columns:1fr!important}
   .seo-policy-table .guide-table{min-width:680px}
 }
+
+/* =========================================================
+   V34 — Airport cards: equal size + cleaner responsive grid
+========================================================= */
+.airport-grid.airport-grid-illustrated{
+  grid-template-columns:repeat(4,minmax(0,1fr));
+  gap:16px;
+  align-items:stretch;
+}
+.airport-grid.airport-grid-illustrated .airport-card{
+  grid-template-columns:110px minmax(0,1fr) 20px;
+  min-height:96px;
+  height:100%;
+  column-gap:12px;
+  border-radius:18px;
+}
+.airport-grid.airport-grid-illustrated .airport-thumb{
+  width:110px;
+  height:96px;
+  min-width:110px;
+  margin:0;
+}
+.airport-grid.airport-grid-illustrated .airport-copy{
+  padding:12px 0;
+}
+.airport-grid.airport-grid-illustrated .airport-copy strong{
+  font-size:.91rem;
+  line-height:1.18;
+}
+.airport-grid.airport-grid-illustrated .airport-copy small{
+  font-size:.72rem;
+  line-height:1.25;
+}
+.airport-grid.airport-grid-illustrated .airport-arrow{
+  padding-right:8px;
+}
+
+@media(max-width:1180px){
+  .airport-grid.airport-grid-illustrated{
+    grid-template-columns:repeat(2,minmax(0,1fr));
+  }
+  .airport-grid.airport-grid-illustrated .airport-card{
+    grid-template-columns:128px minmax(0,1fr) 22px;
+    min-height:96px;
+  }
+  .airport-grid.airport-grid-illustrated .airport-thumb{
+    width:128px;
+    min-width:128px;
+    height:96px;
+  }
+  .airport-grid.airport-grid-illustrated .airport-copy strong{font-size:.97rem}
+  .airport-grid.airport-grid-illustrated .airport-copy small{font-size:.76rem}
+}
+
+@media(max-width:700px){
+  .airport-grid.airport-grid-illustrated{
+    grid-template-columns:1fr;
+    gap:11px;
+  }
+  .airport-grid.airport-grid-illustrated .airport-card{
+    grid-template-columns:108px minmax(0,1fr) 22px;
+    min-height:84px;
+    border-radius:17px;
+    column-gap:12px;
+  }
+  .airport-grid.airport-grid-illustrated .airport-thumb{
+    width:108px;
+    min-width:108px;
+    height:84px;
+  }
+  .airport-grid.airport-grid-illustrated .airport-copy{padding:11px 0}
+  .airport-grid.airport-grid-illustrated .airport-copy strong{font-size:.88rem}
+  .airport-grid.airport-grid-illustrated .airport-copy small{font-size:.7rem}
+}
+
+@media(max-width:390px){
+  .airport-grid.airport-grid-illustrated .airport-card{
+    grid-template-columns:96px minmax(0,1fr) 20px;
+  }
+  .airport-grid.airport-grid-illustrated .airport-thumb{
+    width:96px;
+    min-width:96px;
+    height:80px;
+  }
+  .airport-grid.airport-grid-illustrated .airport-copy strong{font-size:.82rem}
+}
+
+/* =========================================================
+   V35 — Airport cards responsive polish (desktop + mobile)
+========================================================= */
+.airports-section{overflow-x:clip}
+.airport-grid.airport-grid-illustrated{
+  grid-auto-rows:1fr;
+}
+.airport-grid.airport-grid-illustrated .airport-card{
+  width:100%;
+  min-width:0;
+  height:100%;
+  box-sizing:border-box;
+}
+.airport-grid.airport-grid-illustrated .airport-copy,
+.airport-grid.airport-grid-illustrated .airport-copy strong,
+.airport-grid.airport-grid-illustrated .airport-copy small{
+  min-width:0;
+  max-width:100%;
+}
+.airport-grid.airport-grid-illustrated .airport-copy strong,
+.airport-grid.airport-grid-illustrated .airport-copy small{
+  overflow-wrap:break-word;
+}
+.airport-grid.airport-grid-illustrated .airport-thumb img{
+  object-fit:cover;
+  object-position:center;
+}
+
+/* Wide desktop: balanced 4 × 2 layout */
+@media(min-width:1181px){
+  .airport-grid.airport-grid-illustrated{
+    grid-template-columns:repeat(4,minmax(0,1fr));
+  }
+}
+
+/* Laptop / tablet: roomy 2-column cards */
+@media(max-width:1180px) and (min-width:701px){
+  .airport-grid.airport-grid-illustrated{
+    grid-template-columns:repeat(2,minmax(0,1fr));
+    gap:14px;
+  }
+  .airport-grid.airport-grid-illustrated .airport-card{
+    min-height:96px;
+  }
+}
+
+/* Mobile: full-width, consistent touch cards */
+@media(max-width:700px){
+  .airports-section .section-heading{
+    max-width:100%;
+  }
+  .airport-grid.airport-grid-illustrated{
+    width:100%;
+    grid-template-columns:minmax(0,1fr);
+    gap:11px;
+  }
+  .airport-grid.airport-grid-illustrated .airport-card{
+    width:100%;
+    min-height:86px;
+  }
+  .airport-grid.airport-grid-illustrated .airport-copy strong{
+    font-size:.9rem;
+    line-height:1.2;
+  }
+  .airport-grid.airport-grid-illustrated .airport-copy small{
+    line-height:1.25;
+  }
+}
+
+/* Small phones: keep image, title and arrow inside the viewport */
+@media(max-width:390px){
+  .airport-grid.airport-grid-illustrated .airport-card{
+    grid-template-columns:92px minmax(0,1fr) 18px;
+    column-gap:10px;
+    min-height:80px;
+  }
+  .airport-grid.airport-grid-illustrated .airport-thumb{
+    width:92px;
+    min-width:92px;
+    height:80px;
+  }
+  .airport-grid.airport-grid-illustrated .airport-arrow{
+    padding-right:6px;
+    font-size:1.35rem;
+  }
+  .airport-grid.airport-grid-illustrated .airport-copy strong{
+    font-size:.82rem;
+  }
+  .airport-grid.airport-grid-illustrated .airport-copy small{
+    font-size:.68rem;
+  }
+}
