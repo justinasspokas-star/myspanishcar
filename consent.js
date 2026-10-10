@@ -159,21 +159,36 @@
   };
 
   const enToNl = {
-    '/': '/nl/auto-huren-spanje-zonder-creditcard/',
-    '/car-rental-spain-without-credit-card.html': '/nl/auto-huren-spanje-zonder-creditcard/',
+    '/': '/nl/',
+    '/malaga-airport-car-rental.html': '/nl/auto-huren-malaga-airport/',
+    '/alicante-airport-car-rental.html': '/nl/auto-huren-alicante-airport/',
+    '/barcelona-airport-car-rental.html': '/nl/auto-huren-barcelona-airport/',
+    '/valencia-airport-car-rental.html': '/nl/auto-huren-valencia-airport/',
     '/madrid-airport-car-rental.html': '/nl/auto-huren-madrid-zonder-creditcard/',
     '/palma-airport-car-rental.html': '/nl/auto-huren-palma-zonder-creditcard/',
     '/seville-airport-car-rental.html': '/nl/auto-huren-sevilla-zonder-creditcard/',
-    '/tenerife-south-airport-car-rental.html': '/nl/auto-huren-tenerife-zonder-creditcard/'
+    '/tenerife-south-airport-car-rental.html': '/nl/auto-huren-tenerife-zonder-creditcard/',
+    '/centauro-car-rental-spain.html': '/nl/centauro-auto-huren-spanje/',
+    '/car-rental-spain-with-debit-card.html': '/nl/auto-huren-spanje-met-debitcard/',
+    '/car-rental-spain-without-credit-card.html': '/nl/auto-huren-spanje-zonder-creditcard/',
+    '/car-rental-spain-low-deposit.html': '/nl/auto-huren-spanje-lage-borg/'
   };
 
   const nlToEn = {
-    '/nl/auto-huren-spanje-zonder-creditcard/': '/',
+    '/nl/': '/',
+    '/nl/auto-huren-malaga-airport/': '/malaga-airport-car-rental.html',
+    '/nl/auto-huren-alicante-airport/': '/alicante-airport-car-rental.html',
+    '/nl/auto-huren-barcelona-airport/': '/barcelona-airport-car-rental.html',
+    '/nl/auto-huren-valencia-airport/': '/valencia-airport-car-rental.html',
     '/nl/auto-huren-madrid-zonder-creditcard/': '/madrid-airport-car-rental.html',
     '/nl/auto-huren-palma-zonder-creditcard/': '/palma-airport-car-rental.html',
     '/nl/auto-huren-sevilla-zonder-creditcard/': '/seville-airport-car-rental.html',
     '/nl/auto-huren-tenerife-zonder-creditcard/': '/tenerife-south-airport-car-rental.html',
-    '/nl/auto-huren-la-palma-zonder-creditcard/': '/'
+    '/nl/auto-huren-la-palma-zonder-creditcard/': '/',
+    '/nl/centauro-auto-huren-spanje/': '/centauro-car-rental-spain.html',
+    '/nl/auto-huren-spanje-met-debitcard/': '/car-rental-spain-with-debit-card.html',
+    '/nl/auto-huren-spanje-zonder-creditcard/': '/car-rental-spain-without-credit-card.html',
+    '/nl/auto-huren-spanje-lage-borg/': '/car-rental-spain-low-deposit.html'
   };
 
   const getPreference = () => {
