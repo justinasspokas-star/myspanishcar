@@ -171,7 +171,13 @@
     '/centauro-car-rental-spain.html': '/nl/centauro-auto-huren-spanje/',
     '/car-rental-spain-with-debit-card.html': '/nl/auto-huren-spanje-met-debitcard/',
     '/car-rental-spain-without-credit-card.html': '/nl/auto-huren-spanje-zonder-creditcard/',
-    '/car-rental-spain-low-deposit.html': '/nl/auto-huren-spanje-lage-borg/'
+    '/car-rental-spain-low-deposit.html': '/nl/auto-huren-spanje-lage-borg/',
+    '/about.html': '/nl/over-ons/',
+    '/how-we-compare.html': '/nl/hoe-we-vergelijken/',
+    '/privacy.html': '/nl/privacy/',
+    '/cookies.html': '/nl/cookies/',
+    '/affiliate-disclosure.html': '/nl/affiliate-informatie/',
+    '/legal.html': '/nl/juridisch/'
   };
 
   const nlToEn = {
@@ -188,7 +194,13 @@
     '/nl/centauro-auto-huren-spanje/': '/centauro-car-rental-spain.html',
     '/nl/auto-huren-spanje-met-debitcard/': '/car-rental-spain-with-debit-card.html',
     '/nl/auto-huren-spanje-zonder-creditcard/': '/car-rental-spain-without-credit-card.html',
-    '/nl/auto-huren-spanje-lage-borg/': '/car-rental-spain-low-deposit.html'
+    '/nl/auto-huren-spanje-lage-borg/': '/car-rental-spain-low-deposit.html',
+    '/nl/over-ons/': '/about.html',
+    '/nl/hoe-we-vergelijken/': '/how-we-compare.html',
+    '/nl/privacy/': '/privacy.html',
+    '/nl/cookies/': '/cookies.html',
+    '/nl/affiliate-informatie/': '/affiliate-disclosure.html',
+    '/nl/juridisch/': '/legal.html'
   };
 
   const getPreference = () => {
