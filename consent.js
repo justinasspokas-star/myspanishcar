@@ -144,3 +144,87 @@
     showBanner();
   }
 })();
+
+
+/* MySpanishCar persistent language preference */
+(() => {
+  'use strict';
+
+  const LANGUAGE_KEY = 'msc_language_v1';
+  const normalizePath = (value) => {
+    let path = value || '/';
+    path = path.replace(/\/index\.html$/, '/');
+    if (!path.startsWith('/')) path = '/' + path;
+    return path;
+  };
+
+  const enToNl = {
+    '/': '/nl/auto-huren-spanje-zonder-creditcard/',
+    '/car-rental-spain-without-credit-card.html': '/nl/auto-huren-spanje-zonder-creditcard/',
+    '/madrid-airport-car-rental.html': '/nl/auto-huren-madrid-zonder-creditcard/',
+    '/palma-airport-car-rental.html': '/nl/auto-huren-palma-zonder-creditcard/',
+    '/seville-airport-car-rental.html': '/nl/auto-huren-sevilla-zonder-creditcard/',
+    '/tenerife-south-airport-car-rental.html': '/nl/auto-huren-tenerife-zonder-creditcard/'
+  };
+
+  const nlToEn = {
+    '/nl/auto-huren-spanje-zonder-creditcard/': '/',
+    '/nl/auto-huren-madrid-zonder-creditcard/': '/madrid-airport-car-rental.html',
+    '/nl/auto-huren-palma-zonder-creditcard/': '/palma-airport-car-rental.html',
+    '/nl/auto-huren-sevilla-zonder-creditcard/': '/seville-airport-car-rental.html',
+    '/nl/auto-huren-tenerife-zonder-creditcard/': '/tenerife-south-airport-car-rental.html',
+    '/nl/auto-huren-la-palma-zonder-creditcard/': '/'
+  };
+
+  const getPreference = () => {
+    try { return localStorage.getItem(LANGUAGE_KEY); }
+    catch { return null; }
+  };
+
+  const setPreference = (language) => {
+    try { localStorage.setItem(LANGUAGE_KEY, language); }
+    catch { /* Storage may be blocked. */ }
+  };
+
+  document.addEventListener('click', (event) => {
+    const choice = event.target.closest('.language-switcher a[lang]');
+    if (choice) {
+      const language = choice.getAttribute('lang');
+      if (language === 'en' || language === 'nl') setPreference(language);
+      return;
+    }
+
+    const link = event.target.closest('a[href]');
+    if (!link || link.target === '_blank' || link.hasAttribute('download')) return;
+
+    const preference = getPreference();
+    if (preference !== 'en' && preference !== 'nl') return;
+
+    let url;
+    try { url = new URL(link.href, window.location.href); }
+    catch { return; }
+
+    if (url.origin !== window.location.origin) return;
+    const path = normalizePath(url.pathname);
+
+    if (preference === 'nl' && enToNl[path]) {
+      event.preventDefault();
+      window.location.href = enToNl[path] + url.search + url.hash;
+    } else if (preference === 'en' && nlToEn[path]) {
+      event.preventDefault();
+      window.location.href = nlToEn[path] + url.search + url.hash;
+    }
+  });
+
+  const preference = getPreference();
+  const currentPath = normalizePath(window.location.pathname);
+
+  if (preference === 'nl' && enToNl[currentPath]) {
+    const destination = enToNl[currentPath];
+    if (destination !== currentPath) window.location.replace(destination + window.location.search + window.location.hash);
+  } else if (preference === 'en' && nlToEn[currentPath]) {
+    const destination = nlToEn[currentPath];
+    if (destination !== currentPath) window.location.replace(destination + window.location.search + window.location.hash);
+  }
+})();
+/* END persistent language preference */
