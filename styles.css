@@ -1476,3 +1476,13 @@ h1 mark::after{right:18%;height:6px;bottom:-10px}
     font-size:.68rem;
   }
 }
+
+/* V38 — EN/NL language switcher */
+.language-switcher{display:flex;align-items:center;gap:4px;flex:0 0 auto;padding:3px;border:1px solid var(--line);border-radius:10px;background:#fff;box-shadow:0 6px 16px rgba(15,39,71,.07);white-space:nowrap}
+.language-switcher a{display:flex;align-items:center;justify-content:center;min-width:30px;height:30px;padding:0 7px;border-radius:7px;color:#415064;font-size:.72rem;font-weight:850;letter-spacing:.04em;line-height:1;text-decoration:none}
+.language-switcher a:hover,.language-switcher a:focus-visible{color:var(--navy);background:var(--soft)}
+.language-switcher a.is-active{background:var(--navy);color:#fff}
+.language-switcher .language-divider{color:#a8b4c2;font-size:.66rem;font-weight:700}
+@media(max-width:700px){.header-actions{gap:6px}.language-switcher{gap:2px;padding:2px;border-radius:9px}.language-switcher a{min-width:25px;height:28px;padding:0 5px;font-size:.66rem;border-radius:6px}.language-switcher .language-divider{font-size:.58rem}}
+@media(max-width:420px){.language-switcher a{min-width:23px;padding:0 4px}}
+/* END V38 */
