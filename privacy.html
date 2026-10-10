@@ -20,7 +20,7 @@
 <link href="assets/favicon-32x32.png?v=2" rel="icon" sizes="32x32" type="image/png"/>
 <link href="assets/favicon-16x16.png?v=2" rel="icon" sizes="16x16" type="image/png"/>
 <link href="assets/favicon.ico?v=2" rel="shortcut icon"/>
-<link href="styles.css?v=33" rel="stylesheet"/>
+<link href="styles.css?v=34" rel="stylesheet"/>
 <style>
     .legal-main{background:linear-gradient(180deg,#f6fbfe,#fff 380px);min-height:70vh;padding:70px 0 95px}
     .legal-shell{width:min(100% - 32px,900px);margin:auto}
@@ -76,7 +76,12 @@
 <div class="container footer-top">
 <div class="footer-brand"><a class="brand inverse" href="index.html"><img alt="MySpanishCar" class="brand-logo footer-logo" height="138" src="assets/myspanishcar-header-logo.png?v=3" width="660"/></a><p>Car rental comparison in Spain for international travellers.</p></div>
 <div><strong>Website</strong><a href="index.html#search">Compare cars</a><a href="index.html#faq">FAQ</a><a href="mailto:justinasspokas@gmail.com">Contact</a></div>
-<div><strong>Legal</strong><button class="footer-link-button" data-cookie-settings="" type="button">Cookie settings</button><a href="about.html">About MySpanishCar</a><a href="how-we-compare.html">How we compare</a><a href="mailto:justinasspokas@gmail.com">Contact</a></div>
+<div><strong>Legal</strong><nav class="language-switcher" aria-label="Choose language">
+<a class="is-active" href="/privacy.html" lang="en" hreflang="en" aria-current="page" aria-label="English">EN</a>
+<span class="language-divider" aria-hidden="true">|</span>
+<a class="" href="/nl/auto-huren-spanje-zonder-creditcard/" lang="nl" hreflang="nl" aria-label="Nederlands">NL</a>
+</nav>
+<button class="footer-link-button" data-cookie-settings="" type="button">Cookie settings</button><a href="about.html">About MySpanishCar</a><a href="how-we-compare.html">How we compare</a><a href="mailto:justinasspokas@gmail.com">Contact</a></div>
 </div>
 <div class="container footer-bottom"><p>© <span id="year"></span> MySpanishCar · Operated by Justinas Spokas.</p></div>
 </footer>
@@ -92,7 +97,7 @@
 <div class="cookie-modal-actions"><button class="cookie-button cookie-button-secondary" data-consent="reject" type="button">Reject non-essential</button><button class="cookie-button cookie-button-primary" data-consent="save" type="button">Save preferences</button></div>
 </section>
 </div>
-<script defer="" src="consent.js?v=8"></script>
+<script defer="" src="consent.js?v=9"></script>
 <script>document.querySelector('#year').textContent = new Date().getFullYear();</script>
 </body>
 </html>
