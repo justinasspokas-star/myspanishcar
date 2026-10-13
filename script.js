@@ -8,6 +8,8 @@ const resultsSummary = document.querySelector('#results-summary');
 const partnerSearchLocation = document.querySelector('#partner-search-location');
 const partnerSearchDates = document.querySelector('#partner-search-dates');
 
+const isNl = document.documentElement.lang.toLowerCase().startsWith('nl');
+const t = (en, nl) => isNl ? nl : en;
 const toISO = (date) => date.toISOString().slice(0, 10);
 const today = new Date();
 const start = new Date(today); start.setDate(today.getDate() + 14);
@@ -23,7 +25,7 @@ if (pickupDate && returnDate) {
 function formatDate(value) {
   if (!value) return '';
   const date = new Date(`${value}T12:00:00`);
-  return new Intl.DateTimeFormat('en-GB', { day: 'numeric', month: 'short', year: 'numeric' }).format(date);
+  return new Intl.DateTimeFormat(isNl ? 'nl-NL' : 'en-GB', { day: 'numeric', month: 'short', year: 'numeric' }).format(date);
 }
 
 function getDays() {
@@ -38,16 +40,16 @@ if (form) {
     errorBox.textContent = '';
 
     if (!pickup.value) {
-      errorBox.textContent = 'Choose a pickup location to continue.';
+      errorBox.textContent = t('Choose a pickup location to continue.','Kies een ophaallocatie om door te gaan.');
       pickup.focus();
       return;
     }
     if (!pickupDate.value || !returnDate.value) {
-      errorBox.textContent = 'Choose both pickup and return dates.';
+      errorBox.textContent = t('Choose both pickup and return dates.','Kies zowel een ophaal- als retourdatum.');
       return;
     }
     if (new Date(returnDate.value) <= new Date(pickupDate.value)) {
-      errorBox.textContent = 'The return date must be after the pickup date.';
+      errorBox.textContent = t('The return date must be after the pickup date.','De retourdatum moet na de ophaaldatum liggen.');
       returnDate.focus();
       return;
     }
@@ -55,8 +57,8 @@ if (form) {
     const days = getDays();
     const preference = cardFilter?.options[cardFilter.selectedIndex]?.text || 'Any card';
     if (partnerSearchLocation) partnerSearchLocation.textContent = pickup.value;
-    if (partnerSearchDates) partnerSearchDates.textContent = `${formatDate(pickupDate.value)} – ${formatDate(returnDate.value)} · ${days} day${days === 1 ? '' : 's'}`;
-    if (resultsSummary) resultsSummary.textContent = `${pickup.value} · ${days} day${days === 1 ? '' : 's'} · ${preference}. Check final availability and rental conditions on each partner site.`;
+    if (partnerSearchDates) partnerSearchDates.textContent = `${formatDate(pickupDate.value)} – ${formatDate(returnDate.value)} · ${days} ${isNl ? (days === 1 ? 'dag' : 'dagen') : `day${days === 1 ? '' : 's'}`}`;
+    if (resultsSummary) resultsSummary.textContent = isNl ? `${pickup.value} · ${days} ${days === 1 ? 'dag' : 'dagen'} · ${preference}. Controleer definitieve beschikbaarheid en huurvoorwaarden op de partnersite.` : `${pickup.value} · ${days} day${days === 1 ? '' : 's'} · ${preference}. Check final availability and rental conditions on each partner site.`;
 
     document.querySelector('#results')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
   });
