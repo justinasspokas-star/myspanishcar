@@ -1486,3 +1486,108 @@ h1 mark::after{right:18%;height:6px;bottom:-10px}
 @media(max-width:700px){.header-actions{gap:6px}.language-switcher{gap:2px;padding:2px;border-radius:9px}.language-switcher a{min-width:25px;height:28px;padding:0 5px;font-size:.66rem;border-radius:6px}.language-switcher .language-divider{font-size:.58rem}}
 @media(max-width:420px){.language-switcher a{min-width:23px;padding:0 4px}}
 /* END V38 */
+
+
+/* V39 — Netherlands mobile language layout + reliable hero rendering.
+   NL-only to preserve the English design. */
+html[lang="nl"] #search,
+html[lang="nl"] #results,
+html[lang="nl"] #airports,
+html[lang="nl"] #why-us,
+html[lang="nl"] #faq { scroll-margin-top: 86px; }
+html[lang="nl"] .hero-visual picture img { color: transparent; }
+@media (max-width:700px) {
+  html[lang="nl"] .header-inner {
+    min-width:0;
+    gap:6px;
+    width:calc(100% - 20px);
+  }
+  html[lang="nl"] .brand { flex:1 1 auto; min-width:0; overflow:visible; }
+  html[lang="nl"] .brand img.brand-logo {
+    width:clamp(118px,36vw,165px);
+    max-width:100%;
+    height:auto;
+    max-height:43px;
+    object-fit:contain;
+  }
+  html[lang="nl"] .header-actions { flex:0 0 auto; gap:5px; min-width:0; }
+  html[lang="nl"] .header-cta {
+    white-space:nowrap;
+    font-size:.7rem;
+    padding:9px 10px;
+  }
+  html[lang="nl"] .language-switcher { flex-shrink:0; }
+  html[lang="nl"] .menu-toggle { flex:0 0 39px; width:39px; height:39px; }
+  html[lang="nl"] .hero { padding-top:19px; overflow:visible; }
+  html[lang="nl"] .hero-grid { min-height:0; gap:0; }
+  html[lang="nl"] .hero-copy {
+    position:relative;
+    z-index:3;
+    width:calc(100% - 28px);
+    padding:18px 0 16px;
+    margin:0 auto;
+  }
+  html[lang="nl"] .hero-copy h1 {
+    font-size:clamp(2rem,9.1vw,2.9rem);
+    line-height:1.09;
+    letter-spacing:-.05em;
+    overflow-wrap:normal;
+    hyphens:auto;
+  }
+  html[lang="nl"] .hero-copy h1 mark { margin-top:4px; }
+  html[lang="nl"] .hero-lead { margin:19px 0 14px; }
+  html[lang="nl"] .trust-inline { margin-bottom:0; }
+  html[lang="nl"] .trust-inline span { white-space:normal; line-height:1.2; }
+  html[lang="nl"] .hero .hero-visual {
+    position:relative;
+    inset:auto;
+    order:2;
+    width:100%;
+    min-height:0;
+    height:auto;
+    aspect-ratio:16/9;
+    margin:0;
+    border-radius:0;
+    overflow:hidden;
+    display:block;
+    background:#edf6fb;
+  }
+  html[lang="nl"] .hero .hero-visual::before { display:none; }
+  html[lang="nl"] .hero .hero-picture {
+    display:block;
+    width:100%;
+    height:100%;
+    max-width:none;
+  }
+  html[lang="nl"] .hero .hero-visual img {
+    display:block;
+    width:100%;
+    height:100%;
+    max-width:none;
+    max-height:none;
+    object-fit:cover;
+    object-position:center;
+    transform:none;
+    margin:0;
+  }
+  html[lang="nl"] .hero .hero-badge {
+    position:absolute;
+    top:9px;
+    right:10px;
+    margin:0;
+    z-index:5;
+    background:rgba(255,255,255,.96);
+  }
+  html[lang="nl"] .search-wrap {
+    width:calc(100% - 22px);
+    margin-top:-12px;
+  }
+  html[lang="nl"] .search-card { padding-top:18px; }
+  html[lang="nl"] .field > span { font-size:.8rem; }
+  html[lang="nl"] .input-shell select { font-size:.91rem; }
+}
+@media (max-width:380px) {
+  html[lang="nl"] .header-cta { display:none; }
+  html[lang="nl"] .hero-copy h1 { font-size:clamp(1.85rem,9.2vw,2.15rem); }
+  html[lang="nl"] .trust-inline span { font-size:.68rem; }
+}
