@@ -1591,3 +1591,79 @@ html[lang="nl"] .hero-visual picture img { color: transparent; }
   html[lang="nl"] .hero-copy h1 { font-size:clamp(1.85rem,9.2vw,2.15rem); }
   html[lang="nl"] .trust-inline span { font-size:.68rem; }
 }
+
+
+/* V40 — Accessible compact UK/NL flag language picker (no JavaScript). */
+.language-flag-picker {
+  display:block;
+  position:relative;
+  flex:0 0 auto;
+  z-index:120;
+  color:var(--navy);
+}
+.language-flag-picker > summary {
+  box-sizing:border-box;
+  list-style:none;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  width:43px;
+  height:40px;
+  border:1px solid var(--line);
+  border-radius:11px;
+  background:#fff;
+  box-shadow:0 6px 16px rgba(15,39,71,.07);
+  cursor:pointer;
+  user-select:none;
+  -webkit-tap-highlight-color:transparent;
+}
+.language-flag-picker > summary::-webkit-details-marker{display:none}
+.language-flag-picker > summary::marker{content:''}
+.language-flag-picker > summary:hover,
+.language-flag-picker[open] > summary {
+  background:#f5f8fb;
+  border-color:#bccddc;
+}
+.language-flag-picker .flag-icon {
+  display:block;
+  width:25px;
+  height:17px;
+  border:1px solid rgba(15,39,71,.12);
+  border-radius:2px;
+  object-fit:cover;
+  box-shadow:0 1px 2px rgba(15,39,71,.08);
+}
+.language-flag-picker .flag-options{
+  box-sizing:border-box;
+  position:absolute;
+  top:calc(100% + 6px);
+  right:0;
+  min-width:45px;
+  border:1px solid var(--line);
+  border-radius:11px;
+  background:#fff;
+  box-shadow:0 12px 28px rgba(15,39,71,.16);
+  padding:5px;
+  z-index:150;
+}
+.language-flag-picker .flag-options a {
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  min-height:35px;
+  min-width:34px;
+  border-radius:7px;
+  text-decoration:none;
+}
+.language-flag-picker .flag-options a:hover,
+.language-flag-picker .flag-options a:focus-visible {
+  background:#edf5fb;
+}
+@media(max-width:700px){
+  .language-flag-picker > summary{width:38px;height:38px;border-radius:9px}
+  .language-flag-picker .flag-icon{width:24px;height:16px}
+  .language-flag-picker .flag-options{right:0}
+}
+@media(max-width:380px){
+  .language-flag-picker > summary{width:37px;height:37px}
+}
