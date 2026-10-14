@@ -8,7 +8,7 @@ const resultsSummary = document.querySelector('#results-summary');
 const partnerSearchLocation = document.querySelector('#partner-search-location');
 const partnerSearchDates = document.querySelector('#partner-search-dates');
 
-const toISO = (date) => date.toISOString().slice(0, 10);
+const toISO = (date) => `${date.getFullYear()}-${String(date.getMonth()+1).padStart(2, '0')}-${String(date.getDate()).padStart(2, '0')}`;
 const today = new Date();
 const start = new Date(today); start.setDate(today.getDate() + 14);
 const end = new Date(today); end.setDate(today.getDate() + 21);
@@ -53,10 +53,11 @@ if (form) {
     }
 
     const days = getDays();
+    const rentalDays = `${days} ${days === 1 ? 'dag' : 'dagen'}`;
     const preference = cardFilter?.options[cardFilter.selectedIndex]?.text || 'Alle kaarten';
     if (partnerSearchLocation) partnerSearchLocation.textContent = pickup.value;
-    if (partnerSearchDates) partnerSearchDates.textContent = `${formatDate(pickupDate.value)} – ${formatDate(returnDate.value)} · ${days} day${days === 1 ? '' : 's'}`;
-    if (resultsSummary) resultsSummary.textContent = `${pickup.value} · ${days} day${days === 1 ? '' : 's'} · ${preference}. Controleer de definitieve beschikbaarheid en huurvoorwaarden op de partnersite.`;
+    if (partnerSearchDates) partnerSearchDates.textContent = `${formatDate(pickupDate.value)} – ${formatDate(returnDate.value)} · ${rentalDays}`;
+    if (resultsSummary) resultsSummary.textContent = `${pickup.value} · ${rentalDays} · ${preference}. Controleer de definitieve beschikbaarheid en huurvoorwaarden op de partnersite.`;
 
     document.querySelector('#results')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
   });
@@ -82,8 +83,8 @@ if (pickupDate) {
 document.querySelectorAll('.airport-grid a').forEach(link => {
   link.addEventListener('click', () => {
     if (!pickup) return;
-    const airport = link.querySelector('strong')?.textContent || '';
-    const option = [...pickup.options].find(o => o.textContent.includes(airport.replace(' Airport','')));
+    const code = link.querySelector('.airport-code')?.textContent?.trim();
+    const option = [...pickup.options].find(o => code && o.textContent.includes(`(${code})`));
     if (option) pickup.value = option.value;
   });
 });
