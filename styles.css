@@ -1667,3 +1667,10 @@ html[lang="nl"] .hero-visual picture img { color: transparent; }
 @media(max-width:380px){
   .language-flag-picker > summary{width:37px;height:37px}
 }
+
+
+/* Wiber affiliate partner – homepage English / Dutch */
+.partner-wordmark.wiber-wordmark{color:#148F9E;font-size:2.1rem;letter-spacing:-.035em}
+.partner-wordmark.wiber-wordmark::after{background:#244B69}
+.live-partner-card[hidden]{display:none!important}
+@media(max-width:700px){.partner-wordmark.wiber-wordmark{font-size:1.85rem}}
