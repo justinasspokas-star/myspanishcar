@@ -8,6 +8,20 @@ const resultsSummary = document.querySelector('#results-summary');
 const partnerSearchLocation = document.querySelector('#partner-search-location');
 const partnerSearchDates = document.querySelector('#partner-search-dates');
 
+const wiberPartnerCard = document.querySelector('#wiber-partner-card');
+const wiberSearchLocation = document.querySelector('#wiber-search-location');
+const wiberSearchDates = document.querySelector('#wiber-search-dates');
+const wiberAirports = new Set(['AGP', 'ALC', 'PMI', 'VLC', 'IBZ', 'SVQ']);
+function updateWiberLocation() {
+  const airportCode = pickup?.value.match(/\(([A-Z]{3})\)/)?.[1] || '';
+  // Only advertise Wiber for airports listed on its official site.
+  if (wiberPartnerCard) wiberPartnerCard.hidden = Boolean(airportCode) && !wiberAirports.has(airportCode);
+  if (wiberSearchLocation && pickup?.value) wiberSearchLocation.textContent = pickup.value;
+  if (wiberSearchDates && partnerSearchDates) wiberSearchDates.textContent = partnerSearchDates.textContent;
+}
+pickup?.addEventListener('change', updateWiberLocation);
+
+
 const isNl = document.documentElement.lang.toLowerCase().startsWith('nl');
 const t = (en, nl) => isNl ? nl : en;
 const toISO = (date) => date.toISOString().slice(0, 10);
@@ -60,6 +74,7 @@ if (form) {
     if (partnerSearchDates) partnerSearchDates.textContent = `${formatDate(pickupDate.value)} – ${formatDate(returnDate.value)} · ${days} ${isNl ? (days === 1 ? 'dag' : 'dagen') : `day${days === 1 ? '' : 's'}`}`;
     if (resultsSummary) resultsSummary.textContent = isNl ? `${pickup.value} · ${days} ${days === 1 ? 'dag' : 'dagen'} · ${preference}. Controleer definitieve beschikbaarheid en huurvoorwaarden op de partnersite.` : `${pickup.value} · ${days} day${days === 1 ? '' : 's'} · ${preference}. Check final availability and rental conditions on each partner site.`;
 
+    updateWiberLocation();
     document.querySelector('#results')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
   });
 }
